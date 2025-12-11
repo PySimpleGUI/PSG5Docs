@@ -1,0 +1,16 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.dropbox.com	TRUE	/	FALSE	1999999999	gvc	MjEzMTMzNzU1ODM1MjcyODQzODg4MDQ0NjcxNjkwNzc0MzY4Mzcx
+dropbox.com	TRUE	/	FALSE	1999999999	t	1jIfaPeDPgZ5Rko60VX3838_
+www.dropbox.com	TRUE	/	FALSE	1999999999	__Host-js_csrf	1jIfaPeDPgZ5Rko60VX3838_
+www.dropbox.com	TRUE	/	FALSE	1999999999	__Host-ss	8hTh_Q03vo
+dropbox.com	TRUE	/	FALSE	1999999999	locale	en
+www.dropbox.com	TRUE	/	FALSE	1999999999	__Host-logged-out-session	ChDrogB+A3pTeSsIqIyr397aEI6ap8kGGi5BTzFNWmVwYUFTcUlqZk0tTVRlT1F4NENGZ28yRlhzYUdWTnZuYTBTVTZqampB
+www.dropbox.com	TRUE	/	FALSE	1999999999	SameSite	None
+.discordapp.com	TRUE	/	FALSE	1999999999	__cf_bm	cHK1LbDe7EVfj0ey4CXPJV65DAyvh73BPtHkBaDk.KE-1764348097-1.0.1.1-XpV3_4dQHFb.qikH29MinmqBTVcMjDa9wl8o9AIxzpgVHOzKTi6kYVOm7BmO10cr1JmWqpa3VUk9ECXsgTyOI6I.ITrPFgDS14RqyCntPKE
+.discordapp.com	TRUE	/	FALSE	1999999999	_cfuvid	qXQ.a58Y4yZnWXUT2U_Syh4AGMP4jTJojrXzxMJ2NUc-1764348097726-0.0.1.1-604800000
+cdn.discordapp.com	TRUE	/	FALSE	1999999999	SameSite	None
+.docs.pysimplegui.com	TRUE	/	FALSE	1999999999	__cf_bm	.97upo.CDEv3.Y13jmu6myUIVQDIQCIU1.KIRGLoVn0-1764348142-1.0.1.1-o8m.eTR4hwXCSX.Cr1aKyd.xumJ6CddMYDEQnSpAoX5UzV8SGwJimPyurEcJU7UEu76qblrXfh1OB_ZZlSqZ07YsOsaOIk3m7jPX551NAd4
+.docs.pysimplegui.com	TRUE	/	FALSE	1999999999	_cfuvid	ppETO2njGigfm8AT4gFUTDDazxSAIFtBTI7cum2GZTk-1764348142331-0.0.1.1-604800000
+docs.pysimplegui.com	TRUE	/	FALSE	1999999999	SameSite	None
+

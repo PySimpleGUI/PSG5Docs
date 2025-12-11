@@ -1,0 +1,1993 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  
+<!-- Mirrored from docs.pysimplegui.com/en/latest/call_reference/qt/popups/popup_get_file/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Nov 2025 16:38:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="index.html">
+      
+      <link rel="icon" href="../../../../assets/images/branding/PySimpleGUI-Logo.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Popup get file - PySimpleGUI Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/udemy-coupon.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <!-- Default Statcounter code for PySimpleGUI https://pysimplegui.readthedocs.io -->
+<script type="text/javascript">
+    var sc_project=12622535; 
+    var sc_invisible=1; 
+    var sc_security="1d3e2cc1"; 
+</script>
+
+<script type="text/javascript" src="../../../../../../../www.statcounter.com/counter/counter.js" async></script>
+
+<noscript>
+    <div class="statcounter">
+        <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/"target="_blank">
+            <img class="statcounter" src="https://c.statcounter.com/12622535/0/1d3e2cc1/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade">
+        </a>
+    </div>
+</noscript>
+<!-- End of Statcounter Code -->
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <script async type="text/javascript" src="../../../../../../_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="pysimplegui-pysimplegui-revamped-docs" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/call_reference/qt/popups/popup_get_file/" /><meta name="readthedocs-http-status" content="200" /></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#popup_get_file" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../index.html" title="PySimpleGUI Documentation" class="md-header__button md-logo" aria-label="PySimpleGUI Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/branding/PySimpleGUI-Logo-White.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PySimpleGUI Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Popup get file
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/PySimpleGUI/PySimpleGUI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PySimpleGUI/PySimpleGUI
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link md-tabs__link--active">
+        Call Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../cookbook/index.html" class="md-tabs__link">
+        Cookbook
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../demo_screenshots/index.html" class="md-tabs__link">
+      Demo Screenshots
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../FAQ/index.html" class="md-tabs__link">
+      FAQ
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../readme/index.html" class="md-tabs__link">
+        Readme
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../user_screenshots/index.html" class="md-tabs__link">
+        User Screenshots
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../readme_Feb2024/index.html" class="md-tabs__link">
+        Readme Feb 2024
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../githubannouncements/index.html" class="md-tabs__link">
+        Announcements2018-2024
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+<nav class="md-tabs" aria-label="Tabs2" data-md-component="tabs2">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+        
+          
+    
+
+
+        
+          
+    
+
+
+
+    
+        
+        
+    
+
+    
+    
+
+    
+        
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="../../../tkinter/popups/popup_get_file/index.html" class="md-tabs__link">
+                    Tkinter
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+            
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="index.html" class="md-tabs__link md-tabs__link--active">
+                    Qt
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+    
+        
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="../../../web/popups/popup_get_file/index.html" class="md-tabs__link">
+                    Web
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="../../../wx/popups/popup_get_file/index.html" class="md-tabs__link">
+                    Wx
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+      </ul>
+    </div>
+</nav>
+    
+  
+</header>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+    
+        
+        <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+        <div class="md-sidebar__scrollwrap">
+            <div class="md-sidebar__inner">
+            
+
+    
+
+
+    
+
+<button onclick="scrollToActive()" class="jump-to-active-btn">Scroll to active item</button>
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+    <label class="md-nav__title" for="__drawer">
+        <a href="../../../../index.html" title="PySimpleGUI Documentation" class="md-nav__button md-logo" aria-label="PySimpleGUI Documentation" data-md-component="logo">
+        
+  <img src="../../../../assets/images/branding/PySimpleGUI-Logo-White.png" alt="logo">
+
+        </a>
+        PySimpleGUI Documentation
+    </label>
+    
+        <div class="md-nav__source">
+            <a href="https://github.com/PySimpleGUI/PySimpleGUI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PySimpleGUI/PySimpleGUI
+  </div>
+</a>
+        </div>
+    
+    <ul class="md-nav__list" data-md-scrollfix>
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+        
+        
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+            
+            <nav class="md-nav" aria-label="Call Reference" data-md-level="1">
+                <label class="md-nav__title" for="__nav_2">
+                    <span class="md-nav__icon md-icon"></span>
+                    Call Reference
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        <li class="md-nav__item">
+        <a href="../../../index.html" class="md-nav__link">
+            The PySimpleGUI Call Reference
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+        
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+            
+            <nav class="md-nav" aria-label="Qt" data-md-level="2">
+                <label class="md-nav__title" for="__nav_2_2">
+                    <span class="md-nav__icon md-icon"></span>
+                    Qt
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../index.html" class="md-nav__link">
+            Qt Port Call Reference
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../window/index.html" class="md-nav__link">
+            Window
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" >
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_2_3">
+                    Elements
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Elements" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_2_3">
+                    <span class="md-nav__icon md-icon"></span>
+                    Elements
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/button/index.html" class="md-nav__link">
+            Button
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/button_menu/index.html" class="md-nav__link">
+            ButtonMenu
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/canvas/index.html" class="md-nav__link">
+            Canvas
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/checkbox/index.html" class="md-nav__link">
+            Checkbox
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/column/index.html" class="md-nav__link">
+            Column
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/combo/index.html" class="md-nav__link">
+            Combo
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/frame/index.html" class="md-nav__link">
+            Frame
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/graph/index.html" class="md-nav__link">
+            Graph
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/horizontal_separator/index.html" class="md-nav__link">
+            HorizontalSeparator
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/image/index.html" class="md-nav__link">
+            Image
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/listbox/index.html" class="md-nav__link">
+            Listbox
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/menu/index.html" class="md-nav__link">
+            Menu
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/multiline/index.html" class="md-nav__link">
+            Multiline
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/output/index.html" class="md-nav__link">
+            Output
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/pre_defined_buttons/index.html" class="md-nav__link">
+            Pre-Defined Buttons
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/progress_bar/index.html" class="md-nav__link">
+            ProgressBar
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/radio/index.html" class="md-nav__link">
+            Radio
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/slider/index.html" class="md-nav__link">
+            Slider
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/spin/index.html" class="md-nav__link">
+            Spin
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/tab/index.html" class="md-nav__link">
+            Tab
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/tab_group/index.html" class="md-nav__link">
+            TabGroup
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/table/index.html" class="md-nav__link">
+            Table
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/text/index.html" class="md-nav__link">
+            Text
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/tree/index.html" class="md-nav__link">
+            Tree
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/tree_data/index.html" class="md-nav__link">
+            TreeData
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../elements/vertical_separator/index.html" class="md-nav__link">
+            VerticalSeparator
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+        
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" type="checkbox" id="__nav_2_2_4" checked>
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_2_4">
+                    Popups
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Popups" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_2_4">
+                    <span class="md-nav__icon md-icon"></span>
+                    Popups
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../index.html" class="md-nav__link">
+            Popups Call Reference
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup/index.html" class="md-nav__link">
+            Popup
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_auto_close/index.html" class="md-nav__link">
+            Popup auto close
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_cancel/index.html" class="md-nav__link">
+            Popup cancel
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_error/index.html" class="md-nav__link">
+            Popup error
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+        
+    
+    
+        <li class="md-nav__item md-nav__item--active">
+        
+        <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+        
+        
+        
+            <label class="md-nav__link md-nav__link--active" for="__toc">
+            Popup get file
+            <span class="md-nav__icon md-icon"></span>
+            </label>
+        
+        <a href="index.html" class="md-nav__link md-nav__link--active">
+            Popup get file
+        </a>
+        
+            
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        
+<li class="md-nav__item">
+    <a href="#popup_get_file" class="md-nav__link">
+        popup_get_file
+    </a>
+    
+</li>
+
+      
+    </ul>
+  
+</nav>
+        
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_get_folder/index.html" class="md-nav__link">
+            Popup get folder
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_get_text/index.html" class="md-nav__link">
+            Popup get text
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_no_buttons/index.html" class="md-nav__link">
+            Popup no buttons
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_no_titlebar/index.html" class="md-nav__link">
+            Popup no titlebar
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_non_blocking/index.html" class="md-nav__link">
+            Popup non blocking
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_ok/index.html" class="md-nav__link">
+            Popup ok
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_ok_cancel/index.html" class="md-nav__link">
+            Popup ok cancel
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_quick/index.html" class="md-nav__link">
+            Popup quick
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_quick_message/index.html" class="md-nav__link">
+            Popup quick message
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_scrolled/index.html" class="md-nav__link">
+            Popup scrolled
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popup_yes_no/index.html" class="md-nav__link">
+            Popup yes no
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" type="checkbox" id="__nav_2_2_5" >
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_2_5">
+                    Functions
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Functions" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_2_5">
+                    <span class="md-nav__icon md-icon"></span>
+                    Functions
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/configuration/index.html" class="md-nav__link">
+            Application-wide Configuration / Settings
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/debug_window_output/index.html" class="md-nav__link">
+            Debug Window Output
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/main/index.html" class="md-nav__link">
+            The Main PySimpleGUI Program
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/obj_to_string/index.html" class="md-nav__link">
+            Display Objects as Strings
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/platform_checks/index.html" class="md-nav__link">
+            Platform Checks
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/themes/index.html" class="md-nav__link">
+            Themes
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/timer/index.html" class="md-nav__link">
+            Timer
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/user_settings/index.html" class="md-nav__link">
+            User Settings API - Function Interface
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_6" type="checkbox" id="__nav_2_2_6" >
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_2_6">
+                    Classes
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Classes" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_2_6">
+                    <span class="md-nav__icon md-icon"></span>
+                    Classes
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../classes/system_tray/index.html" class="md-nav__link">
+            System tray
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../classes/user_settings/index.html" class="md-nav__link">
+            User settings
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        
+        
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../../../demo_screenshots/index.html" class="md-nav__link">
+            Demo Screenshots
+        </a>
+        </li>
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../../../FAQ/index.html" class="md-nav__link">
+            FAQ
+        </a>
+        </li>
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+    </ul>
+</nav>
+            </div>
+        </div>
+        </div>
+    
+
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+    
+
+    
+
+    
+        <h1>Popup get file</h1>
+    
+
+    <h2 id="popup_get_file">popup_get_file</h2>
+<p>Display popup window with text entry field and browse button so that a file can be chosen by user.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>popup_get_file(
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    message,
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    title = None,
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    default_path = &quot;&quot;,
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    default_extension = &quot;&quot;,
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    save_as = False,
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    file_types = ((&#39;ALL Files&#39;, &#39;*&#39;),),
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    no_window = False,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    size = (None, None),
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    button_color = None,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    background_color = None,
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    text_color = None,
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    icon = ...,
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    font = None,
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    no_titlebar = False,
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    grab_anywhere = False,
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    keep_on_top = False,
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    location = (None, None),
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    initial_folder = None,
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    image = None
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background_color</td>
+<td>str</td>
+<td>None</td>
+<td>background color of the entire window</td>
+</tr>
+<tr>
+<td>button_color</td>
+<td>(str, str) or str</td>
+<td>None</td>
+<td>Color of the button (text, background)</td>
+</tr>
+<tr>
+<td>default_extension</td>
+<td>str</td>
+<td></td>
+<td>If no extension entered by user, add this to filename (only used in saveas dialogs)</td>
+</tr>
+<tr>
+<td>default_path</td>
+<td>str</td>
+<td></td>
+<td>path to display to user as starting point (filled into the input field)</td>
+</tr>
+<tr>
+<td>file_types</td>
+<td>Tuple[Tuple[str,str]]</td>
+<td>(('ALL Files', '*'),)</td>
+<td>List of extensions to show using wildcards. All files (the default) = (("ALL Files", "<em>.</em> *"),).</td>
+</tr>
+<tr>
+<td>font</td>
+<td>(str or (str, int[, str]) or None)</td>
+<td>None</td>
+<td>specifies the font family, size, etc. Tuple or Single string format 'name size styles'. Styles: italic * roman bold normal underline overstrike</td>
+</tr>
+<tr>
+<td>grab_anywhere</td>
+<td>bool</td>
+<td>False</td>
+<td>If True: can grab anywhere to move the window (Default = False)</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>bytes or str</td>
+<td>b'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'</td>
+<td>filename or base64 string to be used for the window's icon</td>
+</tr>
+<tr>
+<td>image</td>
+<td>str or bytes</td>
+<td>None</td>
+<td>Image to include at the top of the popup window</td>
+</tr>
+<tr>
+<td>initial_folder</td>
+<td>str</td>
+<td>None</td>
+<td>location in filesystem to begin browsing</td>
+</tr>
+<tr>
+<td>keep_on_top</td>
+<td>bool</td>
+<td>False</td>
+<td>If True the window will remain above all current windows</td>
+</tr>
+<tr>
+<td>location</td>
+<td>(int, int)</td>
+<td>(None, None)</td>
+<td>Location of upper left corner of the window</td>
+</tr>
+<tr>
+<td>message</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>message displayed to user</td>
+</tr>
+<tr>
+<td>no_titlebar</td>
+<td>bool</td>
+<td>False</td>
+<td>If True no titlebar will be shown</td>
+</tr>
+<tr>
+<td>no_window</td>
+<td>bool</td>
+<td>False</td>
+<td>if True, no PySimpleGUI window will be shown. Instead just the tkinter dialog is shown</td>
+</tr>
+<tr>
+<td>save_as</td>
+<td>bool</td>
+<td>False</td>
+<td>if True, the "save as" dialog is shown which will verify before overwriting</td>
+</tr>
+<tr>
+<td>size</td>
+<td>(int, int)</td>
+<td>(None, None)</td>
+<td>(width, height) of the InputText Element or Combo element if using history feature</td>
+</tr>
+<tr>
+<td>text_color</td>
+<td>str</td>
+<td>None</td>
+<td>color of the text</td>
+</tr>
+<tr>
+<td>title</td>
+<td>str</td>
+<td>None</td>
+<td>Window title</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>str or None</td>
+<td></td>
+<td>string representing the file(s) chosen, None if cancelled or window closed with X</td>
+</tr>
+</tbody>
+</table>
+
+    
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../popup_error/index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Popup error" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Popup error
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../popup_get_folder/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Popup get folder" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Popup get folder
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.integrate", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../../assets/javascripts/scroll-to-active-link.js"></script>
+      
+        <script src="../../../../assets/javascripts/unhide-iframes.js"></script>
+      
+    
+    
+  </body>
+
+<!-- Mirrored from docs.pysimplegui.com/en/latest/call_reference/qt/popups/popup_get_file/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Nov 2025 16:38:39 GMT -->
+</html>

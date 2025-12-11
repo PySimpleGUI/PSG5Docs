@@ -1,0 +1,3070 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  
+<!-- Mirrored from docs.pysimplegui.com/en/latest/call_reference/tkinter/elements/image/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Nov 2025 16:38:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="index.html">
+      
+      <link rel="icon" href="../../../../assets/images/branding/PySimpleGUI-Logo.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Image - PySimpleGUI Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/udemy-coupon.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <!-- Default Statcounter code for PySimpleGUI https://pysimplegui.readthedocs.io -->
+<script type="text/javascript">
+    var sc_project=12622535; 
+    var sc_invisible=1; 
+    var sc_security="1d3e2cc1"; 
+</script>
+
+<script type="text/javascript" src="../../../../../../../www.statcounter.com/counter/counter.js" async></script>
+
+<noscript>
+    <div class="statcounter">
+        <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/"target="_blank">
+            <img class="statcounter" src="https://c.statcounter.com/12622535/0/1d3e2cc1/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade">
+        </a>
+    </div>
+</noscript>
+<!-- End of Statcounter Code -->
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <script async type="text/javascript" src="../../../../../../_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="pysimplegui-pysimplegui-revamped-docs" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/call_reference/tkinter/elements/image/" /><meta name="readthedocs-http-status" content="200" /></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#image" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../index.html" title="PySimpleGUI Documentation" class="md-header__button md-logo" aria-label="PySimpleGUI Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/branding/PySimpleGUI-Logo-White.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PySimpleGUI Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Image
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/PySimpleGUI/PySimpleGUI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PySimpleGUI/PySimpleGUI
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link md-tabs__link--active">
+        Call Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../cookbook/index.html" class="md-tabs__link">
+        Cookbook
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../demo_screenshots/index.html" class="md-tabs__link">
+      Demo Screenshots
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../FAQ/index.html" class="md-tabs__link">
+      FAQ
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../readme/index.html" class="md-tabs__link">
+        Readme
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../user_screenshots/index.html" class="md-tabs__link">
+        User Screenshots
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../readme_Feb2024/index.html" class="md-tabs__link">
+        Readme Feb 2024
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../githubannouncements/index.html" class="md-tabs__link">
+        Announcements2018-2024
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+<nav class="md-tabs" aria-label="Tabs2" data-md-component="tabs2">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+        
+          
+    
+
+
+        
+          
+    
+
+
+
+    
+        
+        
+    
+
+    
+    
+
+    
+        
+        
+            
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="index.html" class="md-tabs__link md-tabs__link--active">
+                    Tkinter
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="../../../qt/elements/image/index.html" class="md-tabs__link">
+                    Qt
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+    
+        
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="../../../web/elements/image/index.html" class="md-tabs__link">
+                    Web
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="../../../wx/elements/image/index.html" class="md-tabs__link">
+                    Wx
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+      </ul>
+    </div>
+</nav>
+    
+  
+</header>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+    
+        
+        <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+        <div class="md-sidebar__scrollwrap">
+            <div class="md-sidebar__inner">
+            
+
+    
+
+
+    
+
+<button onclick="scrollToActive()" class="jump-to-active-btn">Scroll to active item</button>
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+    <label class="md-nav__title" for="__drawer">
+        <a href="../../../../index.html" title="PySimpleGUI Documentation" class="md-nav__button md-logo" aria-label="PySimpleGUI Documentation" data-md-component="logo">
+        
+  <img src="../../../../assets/images/branding/PySimpleGUI-Logo-White.png" alt="logo">
+
+        </a>
+        PySimpleGUI Documentation
+    </label>
+    
+        <div class="md-nav__source">
+            <a href="https://github.com/PySimpleGUI/PySimpleGUI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PySimpleGUI/PySimpleGUI
+  </div>
+</a>
+        </div>
+    
+    <ul class="md-nav__list" data-md-scrollfix>
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+        
+        
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+            
+            <nav class="md-nav" aria-label="Call Reference" data-md-level="1">
+                <label class="md-nav__title" for="__nav_2">
+                    <span class="md-nav__icon md-icon"></span>
+                    Call Reference
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        <li class="md-nav__item">
+        <a href="../../../index.html" class="md-nav__link">
+            The PySimpleGUI Call Reference
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+        
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+            
+            <nav class="md-nav" aria-label="Tkinter" data-md-level="2">
+                <label class="md-nav__title" for="__nav_2_3">
+                    <span class="md-nav__icon md-icon"></span>
+                    Tkinter
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../index.html" class="md-nav__link">
+            Tkinter Port Call Reference
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../window/index.html" class="md-nav__link">
+            Window
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+        
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" checked>
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_3_3">
+                    Elements
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Elements" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_3_3">
+                    <span class="md-nav__icon md-icon"></span>
+                    Elements
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../button/index.html" class="md-nav__link">
+            Button
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../button_menu/index.html" class="md-nav__link">
+            ButtonMenu
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../canvas/index.html" class="md-nav__link">
+            Canvas
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../checkbox/index.html" class="md-nav__link">
+            Checkbox
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../column/index.html" class="md-nav__link">
+            Column
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../combo/index.html" class="md-nav__link">
+            Combo
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../frame/index.html" class="md-nav__link">
+            Frame
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../graph/index.html" class="md-nav__link">
+            Graph
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../horizontal_separator/index.html" class="md-nav__link">
+            HorizontalSeparator
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+        
+    
+    
+        <li class="md-nav__item md-nav__item--active">
+        
+        <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+        
+        
+            
+        
+        
+            <label class="md-nav__link md-nav__link--active" for="__toc">
+            Image
+            <span class="md-nav__icon md-icon"></span>
+            </label>
+        
+        <a href="index.html" class="md-nav__link md-nav__link--active">
+            Image
+        </a>
+        
+            
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        
+<li class="md-nav__item">
+    <a href="#parameter-descriptions" class="md-nav__link">
+        Parameter Descriptions
+    </a>
+    
+</li>
+
+      
+        
+<li class="md-nav__item">
+    <a href="#class-properties" class="md-nav__link">
+        Class Properties
+    </a>
+    
+</li>
+
+      
+        
+<li class="md-nav__item">
+    <a href="#class-methods" class="md-nav__link">
+        Class Methods
+    </a>
+    
+</li>
+
+      
+    </ul>
+  
+</nav>
+        
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../input/index.html" class="md-nav__link">
+            Input
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../layout_helpers/index.html" class="md-nav__link">
+            Layout Helper Funcs
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../listbox/index.html" class="md-nav__link">
+            Listbox
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../menu/index.html" class="md-nav__link">
+            Menu
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../menubar_custom/index.html" class="md-nav__link">
+            MenubarCustom
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../multiline/index.html" class="md-nav__link">
+            Multiline
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../option_menu/index.html" class="md-nav__link">
+            OptionMenu
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../output/index.html" class="md-nav__link">
+            Output
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../pane/index.html" class="md-nav__link">
+            Pane
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../pre_defined_buttons/index.html" class="md-nav__link">
+            Pre-Defined Buttons
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../progress_bar/index.html" class="md-nav__link">
+            ProgressBar
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../radio/index.html" class="md-nav__link">
+            Radio
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../sizegrip/index.html" class="md-nav__link">
+            Sizegrip
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../slider/index.html" class="md-nav__link">
+            Slider
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../spin/index.html" class="md-nav__link">
+            Spin
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../status_bar/index.html" class="md-nav__link">
+            StatusBar
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../tab/index.html" class="md-nav__link">
+            Tab
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../tab_group/index.html" class="md-nav__link">
+            TabGroup
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../table/index.html" class="md-nav__link">
+            Table
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../text/index.html" class="md-nav__link">
+            Text
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../titlebar/index.html" class="md-nav__link">
+            Custom Titlebar
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../tool_tip/index.html" class="md-nav__link">
+            ToolTip
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../tree/index.html" class="md-nav__link">
+            Tree
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../tree_data/index.html" class="md-nav__link">
+            TreeData
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../vertical_separator/index.html" class="md-nav__link">
+            VerticalSeparator
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" type="checkbox" id="__nav_2_3_4" >
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_3_4">
+                    Popups
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Popups" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_3_4">
+                    <span class="md-nav__icon md-icon"></span>
+                    Popups
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/index.html" class="md-nav__link">
+            Popups Call Reference
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/one_line_progress_meter/index.html" class="md-nav__link">
+            One Line Progress Meter
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup/index.html" class="md-nav__link">
+            Popup
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_animated/index.html" class="md-nav__link">
+            Popup animated
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_annoying/index.html" class="md-nav__link">
+            Popup annoying
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_auto_close/index.html" class="md-nav__link">
+            Popup auto close
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_cancel/index.html" class="md-nav__link">
+            Popup cancel
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_error/index.html" class="md-nav__link">
+            Popup error
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_error_with_traceback/index.html" class="md-nav__link">
+            Popup error with traceback
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_get_date/index.html" class="md-nav__link">
+            Popup get date
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_get_file/index.html" class="md-nav__link">
+            Popup get file
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_get_folder/index.html" class="md-nav__link">
+            Popup get folder
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_get_text/index.html" class="md-nav__link">
+            Popup get text
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_menu/index.html" class="md-nav__link">
+            Popup menu
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_no_border/index.html" class="md-nav__link">
+            Popup no border
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_no_buttons/index.html" class="md-nav__link">
+            Popup no buttons
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_no_frame/index.html" class="md-nav__link">
+            Popup no frame
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_no_titlebar/index.html" class="md-nav__link">
+            Popup no titlebar
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_no_wait/index.html" class="md-nav__link">
+            Popup no wait
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_non_blocking/index.html" class="md-nav__link">
+            Popup non blocking
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_notify/index.html" class="md-nav__link">
+            Popup notify
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_ok/index.html" class="md-nav__link">
+            Popup ok
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_ok_cancel/index.html" class="md-nav__link">
+            Popup ok cancel
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_quick/index.html" class="md-nav__link">
+            Popup quick
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_quick_message/index.html" class="md-nav__link">
+            Popup quick message
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_scrolled/index.html" class="md-nav__link">
+            Popup scrolled
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_timed/index.html" class="md-nav__link">
+            Popup timed
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../popups/popup_yes_no/index.html" class="md-nav__link">
+            Popup yes no
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" type="checkbox" id="__nav_2_3_5" >
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_3_5">
+                    Functions
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Functions" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_3_5">
+                    <span class="md-nav__icon md-icon"></span>
+                    Functions
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/clipboard/index.html" class="md-nav__link">
+            Clipboard APIs
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/configuration/index.html" class="md-nav__link">
+            Application-wide Configuration / Settings
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/debug_window_output/index.html" class="md-nav__link">
+            Debug Window Output
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/debugger/index.html" class="md-nav__link">
+            Debugger
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/exec_api/index.html" class="md-nav__link">
+            Exec APIs - Launching Subprocesses
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/main/index.html" class="md-nav__link">
+            The Main PySimpleGUI Program
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/misc/index.html" class="md-nav__link">
+            Misc
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/network_api/index.html" class="md-nav__link">
+            Network API
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/obj_to_string/index.html" class="md-nav__link">
+            Display Objects as Strings
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/platform_checks/index.html" class="md-nav__link">
+            Platform Checks
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/themes/index.html" class="md-nav__link">
+            Themes
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/timer/index.html" class="md-nav__link">
+            Timer
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../functions/user_settings/index.html" class="md-nav__link">
+            User Settings API - Function Interface
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_6" type="checkbox" id="__nav_2_3_6" >
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_3_6">
+                    Classes
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Classes" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_3_6">
+                    <span class="md-nav__icon md-icon"></span>
+                    Classes
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../classes/system_tray/index.html" class="md-nav__link">
+            System tray
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../classes/user_settings/index.html" class="md-nav__link">
+            User settings
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        
+        
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../../../demo_screenshots/index.html" class="md-nav__link">
+            Demo Screenshots
+        </a>
+        </li>
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../../../FAQ/index.html" class="md-nav__link">
+            FAQ
+        </a>
+        </li>
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+    </ul>
+</nav>
+            </div>
+        </div>
+        </div>
+    
+
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+    
+
+    
+
+    
+
+    <h1 id="image">Image</h1>
+<p><strong><a href="../../../../documentation/module/elements/image/index.html">Image documentation</a></strong><br></p>
+<p>Image Element - show an image in the window. Should be a GIF or a PNG only</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Image(
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    source = None,
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    filename = None,
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    data = None,
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    background_color = None,
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    size = (None, None),
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    s = (None, None),
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    pad = None,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    p = None,
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    key = None,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    k = None,
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    tooltip = None,
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    subsample = None,
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    zoom = None,
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    right_click_menu = None,
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    expand_x = False,
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    expand_y = False,
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    visible = True,
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    enable_events = False,
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    metadata = None
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>)
+</code></pre></div>
+<h2 id="parameter-descriptions">Parameter Descriptions</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background_color</td>
+<td></td>
+<td>None</td>
+<td>color of background</td>
+</tr>
+<tr>
+<td>data</td>
+<td>bytes or str or None</td>
+<td>None</td>
+<td>Raw or Base64 representation of the image to put on button. Choose either filename or data</td>
+</tr>
+<tr>
+<td>enable_events</td>
+<td>bool</td>
+<td>False</td>
+<td>Turns on the element specific events. For an Image element, the event is "image clicked"</td>
+</tr>
+<tr>
+<td>expand_x</td>
+<td>bool</td>
+<td>False</td>
+<td>If True the element will automatically expand in the X direction to fill available space</td>
+</tr>
+<tr>
+<td>expand_y</td>
+<td>bool</td>
+<td>False</td>
+<td>If True the element will automatically expand in the Y direction to fill available space</td>
+</tr>
+<tr>
+<td>filename</td>
+<td>str or None</td>
+<td>None</td>
+<td>image filename if there is a button image. GIFs and PNGs only.</td>
+</tr>
+<tr>
+<td>k</td>
+<td>str or int or tuple or object</td>
+<td>None</td>
+<td>Same as the Key. You can use either k or key. Which ever is set will be used.</td>
+</tr>
+<tr>
+<td>key</td>
+<td>str or int or tuple or object</td>
+<td>None</td>
+<td>Used with window.find_element and with return values to uniquely identify this element to uniquely identify this element</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>Any</td>
+<td>None</td>
+<td>User metadata that can be set to ANYTHING</td>
+</tr>
+<tr>
+<td>p</td>
+<td>(int, int or (int, int),(int,int) or int,(int,int)) or  ((int, int),int) or int</td>
+<td>None</td>
+<td>Same as pad parameter. It's an alias. If EITHER of them are set, then the one that's set will be used. If BOTH are set, pad will be used</td>
+</tr>
+<tr>
+<td>pad</td>
+<td>(int, int or (int, int),(int,int) or int,(int,int)) or  ((int, int),int) or int</td>
+<td>None</td>
+<td>Amount of padding to put around element in pixels (left/right, top/bottom) or ((left, right), (top, bottom)) or an int. If an int, then it's converted into a tuple (int, int)</td>
+</tr>
+<tr>
+<td>right_click_menu</td>
+<td>List[List[ List[str] or str ]]</td>
+<td>None</td>
+<td>A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.</td>
+</tr>
+<tr>
+<td>s</td>
+<td>(int, int)  or (None, None) or int</td>
+<td>(None, None)</td>
+<td>Same as size parameter. It's an alias. If EITHER of them are set, then the one that's set will be used. If BOTH are set, size will be used</td>
+</tr>
+<tr>
+<td>size</td>
+<td>(int, int)</td>
+<td>(None, None)</td>
+<td>(width, height) size of image in pixels</td>
+</tr>
+<tr>
+<td>source</td>
+<td>str or bytes or None</td>
+<td>None</td>
+<td>A filename or a base64 bytes. Will automatically detect the type and fill in filename or data for you.</td>
+</tr>
+<tr>
+<td>subsample</td>
+<td>int</td>
+<td>None</td>
+<td>amount to reduce the size of the image. Divides the size by this number. 2=1/2, 3=1/3, 4=1/4, etc</td>
+</tr>
+<tr>
+<td>tooltip</td>
+<td>str</td>
+<td>None</td>
+<td>text, that will appear when mouse hovers over the element</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>bool</td>
+<td>True</td>
+<td>set visibility state of the element</td>
+</tr>
+<tr>
+<td>zoom</td>
+<td>int</td>
+<td>None</td>
+<td>amount to increase the size of the image.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="class-properties">Class Properties</h2>
+<p>&emsp;<strong><a href="#key">key</a></strong><br>
+&emsp;<strong><a href="#metadata">metadata</a></strong><br>
+&emsp;<strong><a href="#visible">visible</a></strong><br>
+&emsp;<strong><a href="#widget">widget</a></strong><br></p>
+<h3 id="key">key</h3>
+<p>Returns key for the element.  This is a READONLY property.
+Keys can be any hashable object (basically anything except a list... tuples are ok, but not lists)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>key
+</code></pre></div>
+Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Any</td>
+<td></td>
+<td>The window's Key</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metadata">metadata</h3>
+<p>Metadata is an Element property that you can use at any time to hold any value
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>metadata
+</code></pre></div>
+Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Any</td>
+<td></td>
+<td>the current metadata value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="visible">visible</h3>
+<p>Returns visibility state for the element.  This is a READONLY property
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>visible
+</code></pre></div>
+Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>bool</td>
+<td></td>
+<td>Visibility state for element</td>
+</tr>
+</tbody>
+</table>
+<h3 id="widget">widget</h3>
+<p>Returns tkinter widget for the element.  This is a READONLY property.
+The implementation is that the Widget member variable is returned. This is a backward compatible addition
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>widget
+</code></pre></div>
+Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>(tkinter.Widget)</td>
+<td></td>
+<td>The element's underlying tkinter widget</td>
+</tr>
+</tbody>
+</table>
+<h2 id="class-methods">Class Methods</h2>
+<p>&emsp;def <strong><a href="#bind">bind</a></strong><br>
+&emsp;def <strong><a href="#block_focus">block_focus</a></strong><br>
+&emsp;def <strong><a href="#expand">expand</a></strong><br>
+&emsp;def <strong><a href="#get_next_focus">get_next_focus</a></strong><br>
+&emsp;def <strong><a href="#get_previous_focus">get_previous_focus</a></strong><br>
+&emsp;def <strong><a href="#get_size">get_size</a></strong><br>
+&emsp;def <strong><a href="#grab_anywhere_exclude">grab_anywhere_exclude</a></strong><br>
+&emsp;def <strong><a href="#grab_anywhere_include">grab_anywhere_include</a></strong><br>
+&emsp;def <strong><a href="#hide_row">hide_row</a></strong><br>
+&emsp;def <strong><a href="#remove_tooltip">remove_tooltip</a></strong><br>
+&emsp;def <strong><a href="#save_element_screenshot_to_disk">save_element_screenshot_to_disk</a></strong><br>
+&emsp;def <strong><a href="#set_cursor">set_cursor</a></strong><br>
+&emsp;def <strong><a href="#set_focus">set_focus</a></strong><br>
+&emsp;def <strong><a href="#set_hscroll_position">set_hscroll_position</a></strong><br>
+&emsp;def <strong><a href="#set_right_click_menu">set_right_click_menu</a></strong><br>
+&emsp;def <strong><a href="#set_size">set_size</a></strong><br>
+&emsp;def <strong><a href="#set_tooltip">set_tooltip</a></strong><br>
+&emsp;def <strong><a href="#set_vscroll_position">set_vscroll_position</a></strong><br>
+&emsp;def <strong><a href="#unbind">unbind</a></strong><br>
+&emsp;def <strong><a href="#unhide_row">unhide_row</a></strong><br>
+&emsp;def <strong><a href="#update">update</a></strong><br>
+&emsp;def <strong><a href="#update_animation">update_animation</a></strong><br>
+&emsp;def <strong><a href="#update_animation_no_buffering">update_animation_no_buffering</a></strong><br></p>
+<h3 id="bind">bind</h3>
+<p>Used to add tkinter events to an Element.
+The tkinter specific data is in the Element's member variable user_bind_event
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>bind(
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    bind_string,
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    key_modifier,
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    propagate = True
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bind_string</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>The string tkinter expected in its bind function</td>
+</tr>
+<tr>
+<td>key_modifier</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>Additional data to be added to the element's key when event is returned</td>
+</tr>
+<tr>
+<td>propagate</td>
+<td>bool</td>
+<td>True</td>
+<td>If True then tkinter will be told to propagate the event to the element</td>
+</tr>
+</tbody>
+</table>
+<h3 id="block_focus">block_focus</h3>
+<p>Enable or disable the element from getting focus by using the keyboard.
+If the block parameter is True, then this element will not be given focus by using
+the keyboard to go from one element to another.
+You CAN click on the element and utilize it.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>block_focus(
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    block = True
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>block</td>
+<td>bool</td>
+<td>True</td>
+<td>if True the element will not get focus via the keyboard</td>
+</tr>
+</tbody>
+</table>
+<h3 id="expand">expand</h3>
+<p>Causes the Element to expand to fill available space in the X and Y directions.  Can specify which or both directions
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>expand(
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    expand_x = False,
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    expand_y = False,
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    expand_row = True
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>expand_row</td>
+<td>bool</td>
+<td>True</td>
+<td>If True the row containing the element will also expand. Without this your element is "trapped" within the row</td>
+</tr>
+<tr>
+<td>expand_x</td>
+<td>bool</td>
+<td>False</td>
+<td>If True Element will expand in the Horizontal directions</td>
+</tr>
+<tr>
+<td>expand_y</td>
+<td>bool</td>
+<td>False</td>
+<td>If True Element will expand in the Vertical directions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get_next_focus">get_next_focus</h3>
+<p>Gets the next element that should get focus after this element.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>get_next_focus()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Element</td>
+<td></td>
+<td>Element that will get focus after this one</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get_previous_focus">get_previous_focus</h3>
+<p>Gets the element that should get focus previous to this element.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>get_previous_focus()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Element</td>
+<td></td>
+<td>Element that should get the focus before this one</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get_size">get_size</h3>
+<p>Return the size of an element in Pixels.  Care must be taken as some elements use characters to specify their size but will return pixels when calling this get_size method.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>get_size()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>(int, int)</td>
+<td></td>
+<td>width and height of the element</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grab_anywhere_exclude">grab_anywhere_exclude</h3>
+<p>Excludes this element from being used by the grab_anywhere feature
+Handy for elements like a Graph element when dragging is enabled. You want the Graph element to get the drag events instead of the window dragging.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>grab_anywhere_exclude()
+</code></pre></div></p>
+<h3 id="grab_anywhere_include">grab_anywhere_include</h3>
+<p>Includes this element in the grab_anywhere feature
+This will allow you to make a Multline element drag a window for example
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>grab_anywhere_include()
+</code></pre></div></p>
+<h3 id="hide_row">hide_row</h3>
+<p>Hide the entire row an Element is located on.
+Use this if you must have all space removed when you are hiding an element, including the row container
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>hide_row()
+</code></pre></div></p>
+<h3 id="remove_tooltip">remove_tooltip</h3>
+<p>Removes a previiously created tooltip for an element
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>remove_tooltip()
+</code></pre></div></p>
+<h3 id="save_element_screenshot_to_disk">save_element_screenshot_to_disk</h3>
+<p>Saves an image of the PySimpleGUI window provided into the filename provided
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>save_element_screenshot_to_disk(
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    filename = None
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>(PIL.ImageGrab or None)</td>
+<td></td>
+<td>A PIL ImageGrab object that can be saved or manipulated</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_cursor">set_cursor</h3>
+<p>Sets the cursor for the current Element.
+"Cursor" is used in 2 different ways in this call.
+For the parameter "cursor" it's actually the mouse pointer.
+If you do not want any mouse pointer, then use the string "none"
+For the parameter "cursor_color" it's the color of the beam used when typing into an input element
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>set_cursor(
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    cursor = None,
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    cursor_color = None
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cursor</td>
+<td>str</td>
+<td>None</td>
+<td>The tkinter cursor name</td>
+</tr>
+<tr>
+<td>cursor_color</td>
+<td>str</td>
+<td>None</td>
+<td>color to set the "cursor" to</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_focus">set_focus</h3>
+<p>Sets the current focus to be on this element
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>set_focus(
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    force = False
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>force</td>
+<td>bool</td>
+<td>False</td>
+<td>if True will call focus_force otherwise calls focus_set</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_hscroll_position">set_hscroll_position</h3>
+<p>Attempts to set the horizontal scroll postition for an element's Widget
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>set_hscroll_position(
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    percent_from_left
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>percent_from_left</td>
+<td>float</td>
+<td><class 'inspect._empty'></td>
+<td>From 0 to 1.0, the percentage from the left to move scrollbar to</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_right_click_menu">set_right_click_menu</h3>
+<p>Sets a right click menu for an element.
+If a menu is already set for the element, it will call the tkinter destroy method to remove it
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>set_right_click_menu(
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    menu = None
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>menu</td>
+<td>List[List[ List[str] or str ]]</td>
+<td>None</td>
+<td>A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_size">set_size</h3>
+<p>Changes the size of an element to a specific size.
+It's possible to specify None for one of sizes so that only 1 of the element's dimensions are changed.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>set_size(
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    size = (None, None)
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>(int, int)</td>
+<td>(None, None)</td>
+<td>The size in characters, rows typically. In some cases they are pixels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_tooltip">set_tooltip</h3>
+<p>Called by application to change the tooltip text for an Element.  Normally invoked using the Element Object such as: window.Element('key').SetToolTip('New tip').
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>set_tooltip(
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    tooltip_text
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tooltip_text</td>
+<td>str or None</td>
+<td><class 'inspect._empty'></td>
+<td>the text to show in tooltip. If None then no tip will be shown</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_vscroll_position">set_vscroll_position</h3>
+<p>Attempts to set the vertical scroll postition for an element's Widget
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>set_vscroll_position(
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    percent_from_top
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>percent_from_top</td>
+<td>float</td>
+<td><class 'inspect._empty'></td>
+<td>From 0 to 1.0, the percentage from the top to move scrollbar to</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unbind">unbind</h3>
+<p>Removes a previously bound tkinter event from an Element.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>unbind(
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    bind_string
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bind_string</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>The string tkinter expected in its bind function</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unhide_row">unhide_row</h3>
+<p>Unhides (makes visible again) the row container that the Element is located on.
+Note that it will re-appear at the bottom of the window / container, most likely.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>unhide_row()
+</code></pre></div></p>
+<h3 id="update">update</h3>
+<p>Changes some of the settings for the Image Element. Must call <code>Window.Read</code> or <code>Window.Finalize</code> prior.
+To clear an image that's been displayed, call with NONE of the options set.  A blank update call will
+delete the previously shown image.</p>
+<p>Changes will not be visible in your window until you call window.read or window.refresh.</p>
+<p>If you change visibility, your element may MOVE. If you want it to remain stationary, use the "layout helper"
+function "pin" to ensure your element is "pinned" to that location in your layout so that it returns there
+when made visible.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>update(
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    source = None,
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    filename = None,
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>    data = None,
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>    size = (None, None),
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>    subsample = None,
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>    zoom = None,
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>    visible = None
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>str or tkPhotoImage</td>
+<td>None</td>
+<td>Base64 encoded string OR a tk.PhotoImage object</td>
+</tr>
+<tr>
+<td>filename</td>
+<td>str</td>
+<td>None</td>
+<td>filename to the new image to display.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>Tuple[int,int]</td>
+<td>(None, None)</td>
+<td>(width, height) size of image in pixels</td>
+</tr>
+<tr>
+<td>source</td>
+<td>str or bytes or None</td>
+<td>None</td>
+<td>A filename or a base64 bytes. Will automatically detect the type and fill in filename or data for you.</td>
+</tr>
+<tr>
+<td>subsample</td>
+<td>int</td>
+<td>None</td>
+<td>amount to reduce the size of the image. Divides the size by this number. 2=1/2, 3=1/3, 4=1/4, etc</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>bool</td>
+<td>None</td>
+<td>control visibility of element</td>
+</tr>
+<tr>
+<td>zoom</td>
+<td>int</td>
+<td>None</td>
+<td>amount to increase the size of the image</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_animation">update_animation</h3>
+<p>Show an Animated GIF. Call the function as often as you like. The function will determine when to show the next frame and will automatically advance to the next frame at the right time.
+NOTE - does NOT perform a sleep call to delay
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>update_animation(
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    source,
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    time_between_frames = 0
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>str or bytes or None</td>
+<td><class 'inspect._empty'></td>
+<td>Filename or Base64 encoded string containing Animated GIF</td>
+</tr>
+<tr>
+<td>time_between_frames</td>
+<td>int</td>
+<td>0</td>
+<td>Number of milliseconds to wait between showing frames</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>True or False or None</td>
+<td></td>
+<td>True if worked OK, False if out of frames, None is window was closed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_animation_no_buffering">update_animation_no_buffering</h3>
+<p>Show an Animated GIF. Call the function as often as you like. The function will determine when to show the next frame and will automatically advance to the next frame at the right time.
+NOTE - does NOT perform a sleep call to delay
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>update_animation_no_buffering(
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    source,
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>    time_between_frames = 0
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>str or bytes</td>
+<td><class 'inspect._empty'></td>
+<td>Filename or Base64 encoded string containing Animated GIF</td>
+</tr>
+<tr>
+<td>time_between_frames</td>
+<td>int</td>
+<td>0</td>
+<td>Number of milliseconds to wait between showing frames</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>True or False or None</td>
+<td></td>
+<td>True if worked OK, False if out of frames, None is window was closed</td>
+</tr>
+</tbody>
+</table>
+
+    
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../horizontal_separator/index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: HorizontalSeparator" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              HorizontalSeparator
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../input/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Input" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Input
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.integrate", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../../assets/javascripts/scroll-to-active-link.js"></script>
+      
+        <script src="../../../../assets/javascripts/unhide-iframes.js"></script>
+      
+    
+    
+  </body>
+
+<!-- Mirrored from docs.pysimplegui.com/en/latest/call_reference/tkinter/elements/image/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Nov 2025 16:38:46 GMT -->
+</html>

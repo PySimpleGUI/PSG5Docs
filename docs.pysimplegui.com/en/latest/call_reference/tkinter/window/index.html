@@ -1,0 +1,4299 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  
+<!-- Mirrored from docs.pysimplegui.com/en/latest/call_reference/tkinter/window/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Nov 2025 16:38:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="index.html">
+      
+      <link rel="icon" href="../../../assets/images/branding/PySimpleGUI-Logo.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Window - PySimpleGUI Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/udemy-coupon.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <!-- Default Statcounter code for PySimpleGUI https://pysimplegui.readthedocs.io -->
+<script type="text/javascript">
+    var sc_project=12622535; 
+    var sc_invisible=1; 
+    var sc_security="1d3e2cc1"; 
+</script>
+
+<script type="text/javascript" src="../../../../../../www.statcounter.com/counter/counter.js" async></script>
+
+<noscript>
+    <div class="statcounter">
+        <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/"target="_blank">
+            <img class="statcounter" src="https://c.statcounter.com/12622535/0/1d3e2cc1/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade">
+        </a>
+    </div>
+</noscript>
+<!-- End of Statcounter Code -->
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <script async type="text/javascript" src="../../../../../_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="pysimplegui-pysimplegui-revamped-docs" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/call_reference/tkinter/window/" /><meta name="readthedocs-http-status" content="200" /></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#window" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="PySimpleGUI Documentation" class="md-header__button md-logo" aria-label="PySimpleGUI Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/branding/PySimpleGUI-Logo-White.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PySimpleGUI Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Window
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/PySimpleGUI/PySimpleGUI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PySimpleGUI/PySimpleGUI
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link md-tabs__link--active">
+        Call Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../cookbook/index.html" class="md-tabs__link">
+        Cookbook
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../demo_screenshots/index.html" class="md-tabs__link">
+      Demo Screenshots
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../FAQ/index.html" class="md-tabs__link">
+      FAQ
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../readme/index.html" class="md-tabs__link">
+        Readme
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../user_screenshots/index.html" class="md-tabs__link">
+        User Screenshots
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../readme_Feb2024/index.html" class="md-tabs__link">
+        Readme Feb 2024
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../githubannouncements/index.html" class="md-tabs__link">
+        Announcements2018-2024
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+<nav class="md-tabs" aria-label="Tabs2" data-md-component="tabs2">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+        
+          
+    
+
+
+        
+          
+    
+
+
+
+    
+        
+        
+    
+
+    
+    
+
+    
+        
+        
+            
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="index.html" class="md-tabs__link md-tabs__link--active">
+                    Tkinter
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="../../qt/window/index.html" class="md-tabs__link">
+                    Qt
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+    
+        
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="../../web/window/index.html" class="md-tabs__link">
+                    Web
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+        
+            
+            
+                <li class="md-tabs__item">
+                <a href="../../wx/window/index.html" class="md-tabs__link">
+                    Wx
+                </a>
+                </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+          
+    
+
+
+        
+      </ul>
+    </div>
+</nav>
+    
+  
+</header>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+    
+        
+        <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+        <div class="md-sidebar__scrollwrap">
+            <div class="md-sidebar__inner">
+            
+
+    
+
+
+    
+
+<button onclick="scrollToActive()" class="jump-to-active-btn">Scroll to active item</button>
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+    <label class="md-nav__title" for="__drawer">
+        <a href="../../../index.html" title="PySimpleGUI Documentation" class="md-nav__button md-logo" aria-label="PySimpleGUI Documentation" data-md-component="logo">
+        
+  <img src="../../../assets/images/branding/PySimpleGUI-Logo-White.png" alt="logo">
+
+        </a>
+        PySimpleGUI Documentation
+    </label>
+    
+        <div class="md-nav__source">
+            <a href="https://github.com/PySimpleGUI/PySimpleGUI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PySimpleGUI/PySimpleGUI
+  </div>
+</a>
+        </div>
+    
+    <ul class="md-nav__list" data-md-scrollfix>
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+        
+        
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+            
+            <nav class="md-nav" aria-label="Call Reference" data-md-level="1">
+                <label class="md-nav__title" for="__nav_2">
+                    <span class="md-nav__icon md-icon"></span>
+                    Call Reference
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        <li class="md-nav__item">
+        <a href="../../index.html" class="md-nav__link">
+            The PySimpleGUI Call Reference
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+        
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+            
+            <nav class="md-nav" aria-label="Tkinter" data-md-level="2">
+                <label class="md-nav__title" for="__nav_2_3">
+                    <span class="md-nav__icon md-icon"></span>
+                    Tkinter
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../index.html" class="md-nav__link">
+            Tkinter Port Call Reference
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+        
+    
+    
+        <li class="md-nav__item md-nav__item--active">
+        
+        <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+        
+        
+            
+        
+        
+            <label class="md-nav__link md-nav__link--active" for="__toc">
+            Window
+            <span class="md-nav__icon md-icon"></span>
+            </label>
+        
+        <a href="index.html" class="md-nav__link md-nav__link--active">
+            Window
+        </a>
+        
+            
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        
+<li class="md-nav__item">
+    <a href="#parameter-descriptions" class="md-nav__link">
+        Parameter Descriptions
+    </a>
+    
+</li>
+
+      
+        
+<li class="md-nav__item">
+    <a href="#class-properties" class="md-nav__link">
+        Class Properties
+    </a>
+    
+</li>
+
+      
+        
+<li class="md-nav__item">
+    <a href="#class-methods" class="md-nav__link">
+        Class Methods
+    </a>
+    
+</li>
+
+      
+    </ul>
+  
+</nav>
+        
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" >
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_3_3">
+                    Elements
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Elements" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_3_3">
+                    <span class="md-nav__icon md-icon"></span>
+                    Elements
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/button/index.html" class="md-nav__link">
+            Button
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/button_menu/index.html" class="md-nav__link">
+            ButtonMenu
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/canvas/index.html" class="md-nav__link">
+            Canvas
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/checkbox/index.html" class="md-nav__link">
+            Checkbox
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/column/index.html" class="md-nav__link">
+            Column
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/combo/index.html" class="md-nav__link">
+            Combo
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/frame/index.html" class="md-nav__link">
+            Frame
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/graph/index.html" class="md-nav__link">
+            Graph
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/horizontal_separator/index.html" class="md-nav__link">
+            HorizontalSeparator
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/image/index.html" class="md-nav__link">
+            Image
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/input/index.html" class="md-nav__link">
+            Input
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/layout_helpers/index.html" class="md-nav__link">
+            Layout Helper Funcs
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/listbox/index.html" class="md-nav__link">
+            Listbox
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/menu/index.html" class="md-nav__link">
+            Menu
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/menubar_custom/index.html" class="md-nav__link">
+            MenubarCustom
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/multiline/index.html" class="md-nav__link">
+            Multiline
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/option_menu/index.html" class="md-nav__link">
+            OptionMenu
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/output/index.html" class="md-nav__link">
+            Output
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/pane/index.html" class="md-nav__link">
+            Pane
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/pre_defined_buttons/index.html" class="md-nav__link">
+            Pre-Defined Buttons
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/progress_bar/index.html" class="md-nav__link">
+            ProgressBar
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/radio/index.html" class="md-nav__link">
+            Radio
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/sizegrip/index.html" class="md-nav__link">
+            Sizegrip
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/slider/index.html" class="md-nav__link">
+            Slider
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/spin/index.html" class="md-nav__link">
+            Spin
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/status_bar/index.html" class="md-nav__link">
+            StatusBar
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/tab/index.html" class="md-nav__link">
+            Tab
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/tab_group/index.html" class="md-nav__link">
+            TabGroup
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/table/index.html" class="md-nav__link">
+            Table
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/text/index.html" class="md-nav__link">
+            Text
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/titlebar/index.html" class="md-nav__link">
+            Custom Titlebar
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/tool_tip/index.html" class="md-nav__link">
+            ToolTip
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/tree/index.html" class="md-nav__link">
+            Tree
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/tree_data/index.html" class="md-nav__link">
+            TreeData
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../elements/vertical_separator/index.html" class="md-nav__link">
+            VerticalSeparator
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" type="checkbox" id="__nav_2_3_4" >
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_3_4">
+                    Popups
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Popups" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_3_4">
+                    <span class="md-nav__icon md-icon"></span>
+                    Popups
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/index.html" class="md-nav__link">
+            Popups Call Reference
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/one_line_progress_meter/index.html" class="md-nav__link">
+            One Line Progress Meter
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup/index.html" class="md-nav__link">
+            Popup
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_animated/index.html" class="md-nav__link">
+            Popup animated
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_annoying/index.html" class="md-nav__link">
+            Popup annoying
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_auto_close/index.html" class="md-nav__link">
+            Popup auto close
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_cancel/index.html" class="md-nav__link">
+            Popup cancel
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_error/index.html" class="md-nav__link">
+            Popup error
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_error_with_traceback/index.html" class="md-nav__link">
+            Popup error with traceback
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_get_date/index.html" class="md-nav__link">
+            Popup get date
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_get_file/index.html" class="md-nav__link">
+            Popup get file
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_get_folder/index.html" class="md-nav__link">
+            Popup get folder
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_get_text/index.html" class="md-nav__link">
+            Popup get text
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_menu/index.html" class="md-nav__link">
+            Popup menu
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_no_border/index.html" class="md-nav__link">
+            Popup no border
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_no_buttons/index.html" class="md-nav__link">
+            Popup no buttons
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_no_frame/index.html" class="md-nav__link">
+            Popup no frame
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_no_titlebar/index.html" class="md-nav__link">
+            Popup no titlebar
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_no_wait/index.html" class="md-nav__link">
+            Popup no wait
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_non_blocking/index.html" class="md-nav__link">
+            Popup non blocking
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_notify/index.html" class="md-nav__link">
+            Popup notify
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_ok/index.html" class="md-nav__link">
+            Popup ok
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_ok_cancel/index.html" class="md-nav__link">
+            Popup ok cancel
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_quick/index.html" class="md-nav__link">
+            Popup quick
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_quick_message/index.html" class="md-nav__link">
+            Popup quick message
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_scrolled/index.html" class="md-nav__link">
+            Popup scrolled
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_timed/index.html" class="md-nav__link">
+            Popup timed
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../popups/popup_yes_no/index.html" class="md-nav__link">
+            Popup yes no
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" type="checkbox" id="__nav_2_3_5" >
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_3_5">
+                    Functions
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Functions" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_3_5">
+                    <span class="md-nav__icon md-icon"></span>
+                    Functions
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/clipboard/index.html" class="md-nav__link">
+            Clipboard APIs
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/configuration/index.html" class="md-nav__link">
+            Application-wide Configuration / Settings
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/debug_window_output/index.html" class="md-nav__link">
+            Debug Window Output
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/debugger/index.html" class="md-nav__link">
+            Debugger
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/exec_api/index.html" class="md-nav__link">
+            Exec APIs - Launching Subprocesses
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/main/index.html" class="md-nav__link">
+            The Main PySimpleGUI Program
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/misc/index.html" class="md-nav__link">
+            Misc
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/network_api/index.html" class="md-nav__link">
+            Network API
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/obj_to_string/index.html" class="md-nav__link">
+            Display Objects as Strings
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/platform_checks/index.html" class="md-nav__link">
+            Platform Checks
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/themes/index.html" class="md-nav__link">
+            Themes
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/timer/index.html" class="md-nav__link">
+            Timer
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../functions/user_settings/index.html" class="md-nav__link">
+            User Settings API - Function Interface
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        
+        
+        <li class="md-nav__item md-nav__item--nested">
+            
+                
+                
+                    <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_6" type="checkbox" id="__nav_2_3_6" >
+                
+                
+                
+                
+                    <label class="md-nav__link" for="__nav_2_3_6">
+                    Classes
+                    <span class="md-nav__icon md-icon"></span>
+                    </label>
+                
+            
+            <nav class="md-nav" aria-label="Classes" data-md-level="3">
+                <label class="md-nav__title" for="__nav_2_3_6">
+                    <span class="md-nav__icon md-icon"></span>
+                    Classes
+                </label>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../classes/system_tray/index.html" class="md-nav__link">
+            System tray
+        </a>
+        </li>
+    
+
+                        
+                    
+                        
+                            
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../classes/user_settings/index.html" class="md-nav__link">
+            User settings
+        </a>
+        </li>
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        
+        
+    
+
+                        
+                    
+                        
+                            
+    
+    
+        
+    
+    
+        
+        
+    
+
+                        
+                    
+                </ul>
+            </nav>
+        </li>
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../../demo_screenshots/index.html" class="md-nav__link">
+            Demo Screenshots
+        </a>
+        </li>
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        <li class="md-nav__item">
+        <a href="../../../FAQ/index.html" class="md-nav__link">
+            FAQ
+        </a>
+        </li>
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+            
+            
+            
+
+    
+    
+    
+        
+        
+    
+
+        
+    </ul>
+</nav>
+            </div>
+        </div>
+        </div>
+    
+
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+    
+
+    
+
+    
+
+    <h1 id="window">Window</h1>
+<p><strong><a href="../../../documentation/module/window/index.html">Window documentation</a></strong><br></p>
+<p>Represents a single Window</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Window(
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    title,
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    layout = None,
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    default_element_size = None,
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    default_button_element_size = (None, None),
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    auto_size_text = None,
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    auto_size_buttons = None,
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    location = (None, None),
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    relative_location = (None, None),
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    auto_save_location = False,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    size = (None, None),
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    element_padding = None,
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    margins = (None, None),
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    button_color = None,
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    font = None,
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    progress_bar_color = (None, None),
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    background_color = None,
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    border_depth = None,
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    auto_close = False,
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    auto_close_duration = 3,
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    icon = None,
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    force_toplevel = False,
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    alpha_channel = None,
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    return_keyboard_events = False,
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    use_default_focus = True,
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    text_justification = None,
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    no_titlebar = False,
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    grab_anywhere = False,
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    grab_anywhere_using_control = True,
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    keep_on_top = None,
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    resizable = False,
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    disable_close = False,
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    disable_minimize = False,
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    right_click_menu = None,
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    transparent_color = None,
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    debugger_enabled = False,
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    right_click_menu_background_color = None,
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    right_click_menu_text_color = None,
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    right_click_menu_disabled_text_color = None,
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    right_click_menu_selected_colors = (None, None),
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    right_click_menu_font = None,
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    right_click_menu_tearoff = False,
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    finalize = False,
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    element_justification = &quot;left&quot;,
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    ttk_theme = None,
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    use_ttk_buttons = None,
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    modal = False,
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    enable_close_attempted_event = False,
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    enable_window_config_events = False,
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    repeating_timer_ms = None,
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    titlebar_background_color = None,
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    titlebar_text_color = None,
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    titlebar_font = None,
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    titlebar_icon = None,
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    use_custom_titlebar = None,
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    scaling = None,
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    sbar_trough_color = None,
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    sbar_background_color = None,
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>    sbar_arrow_color = None,
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    sbar_width = None,
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    sbar_arrow_width = None,
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    sbar_frame_color = None,
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    sbar_relief = None,
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    watermark = None,
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>    print_event_values = None,
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    metadata = None
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>)
+</code></pre></div>
+<h2 id="parameter-descriptions">Parameter Descriptions</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alpha_channel</td>
+<td>float</td>
+<td>None</td>
+<td>Sets the opacity of the window. 0 = invisible 1 = completely visible. Values bewteen 0 &amp; 1 will produce semi-transparent windows in SOME environments (The Raspberry Pi always has this value at 1 and cannot change.</td>
+</tr>
+<tr>
+<td>auto_close</td>
+<td>bool</td>
+<td>False</td>
+<td>If True, the window will automatically close itself</td>
+</tr>
+<tr>
+<td>auto_close_duration</td>
+<td>int</td>
+<td>3</td>
+<td>Number of seconds to wait before closing the window</td>
+</tr>
+<tr>
+<td>auto_save_location</td>
+<td>bool</td>
+<td>False</td>
+<td>If True the windows location will be automatically saved to a settings file and will be reloaded next time the program is run. Save happens when window close is detected</td>
+</tr>
+<tr>
+<td>auto_size_buttons</td>
+<td>bool</td>
+<td>None</td>
+<td>True if Buttons in this Window should be sized to exactly fit the text on this.</td>
+</tr>
+<tr>
+<td>auto_size_text</td>
+<td>bool</td>
+<td>None</td>
+<td>True if Elements in Window should be sized to exactly fir the length of text</td>
+</tr>
+<tr>
+<td>background_color</td>
+<td>str</td>
+<td>None</td>
+<td>color of background</td>
+</tr>
+<tr>
+<td>border_depth</td>
+<td>int</td>
+<td>None</td>
+<td>Default border depth (width) for all elements in the window</td>
+</tr>
+<tr>
+<td>button_color</td>
+<td>(str, str) or str</td>
+<td>None</td>
+<td>Default button colors for all buttons in the window</td>
+</tr>
+<tr>
+<td>debugger_enabled</td>
+<td>bool</td>
+<td>False</td>
+<td>If True then the internal debugger will be enabled. Also controllable via the global settings. If global settings is true then will be enabled for all windows</td>
+</tr>
+<tr>
+<td>default_button_element_size</td>
+<td>(int, int)</td>
+<td>(None, None)</td>
+<td>(width, height) size in characters (wide) and rows (high) for all Button elements in this window</td>
+</tr>
+<tr>
+<td>default_element_size</td>
+<td>(int, int) - (width, height)</td>
+<td>None</td>
+<td>size in characters (wide) and rows (high) for all elements in this window</td>
+</tr>
+<tr>
+<td>disable_close</td>
+<td>bool</td>
+<td>False</td>
+<td>If True, the X button in the top right corner of the window will no work. Use with caution and always give a way out toyour users</td>
+</tr>
+<tr>
+<td>disable_minimize</td>
+<td>bool</td>
+<td>False</td>
+<td>if True the user won't be able to minimize window. Good for taking over entire screen and staying that way.</td>
+</tr>
+<tr>
+<td>element_justification</td>
+<td>str</td>
+<td>left</td>
+<td>All elements in the Window itself will have this justification 'left', 'right', 'center' are valid values</td>
+</tr>
+<tr>
+<td>element_padding</td>
+<td>(int, int or (int, int),(int,int)) or int</td>
+<td>None</td>
+<td>Default amount of padding to put around elements in window (left/right, top/bottom) or ((left, right), (top, bottom)), or an int. If an int, then it's converted into a tuple (int, int)</td>
+</tr>
+<tr>
+<td>enable_close_attempted_event</td>
+<td>bool</td>
+<td>False</td>
+<td>If True then the window will not close when "X" clicked. Instead an event WINDOW_CLOSE_ATTEMPTED_EVENT if returned from window.read</td>
+</tr>
+<tr>
+<td>enable_window_config_events</td>
+<td>bool</td>
+<td>False</td>
+<td>If True then window configuration events (resizing or moving the window) will return WINDOW_CONFIG_EVENT from window.read. Note you will get several when Window is created.</td>
+</tr>
+<tr>
+<td>finalize</td>
+<td>bool</td>
+<td>False</td>
+<td>If True then the Finalize method will be called. Use this rather than chaining .Finalize for cleaner code</td>
+</tr>
+<tr>
+<td>font</td>
+<td>(str or (str, int[, str]) or None)</td>
+<td>None</td>
+<td>specifies the font family, size, etc. Tuple or Single string format 'name size styles'. Styles: italic * roman bold normal underline overstrike</td>
+</tr>
+<tr>
+<td>force_toplevel</td>
+<td>bool</td>
+<td>False</td>
+<td>If True will cause this window to skip the normal use of a hidden master window</td>
+</tr>
+<tr>
+<td>grab_anywhere</td>
+<td>bool</td>
+<td>False</td>
+<td>If True can use mouse to click and drag to move the window. Almost every location of the window will work except input fields on some systems</td>
+</tr>
+<tr>
+<td>grab_anywhere_using_control</td>
+<td>bool</td>
+<td>True</td>
+<td>If True can use CONTROL key + left mouse mouse to click and drag to move the window. DEFAULT is TRUE. Unlike normal grab anywhere, it works on all elements.</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>(str or bytes)</td>
+<td>None</td>
+<td>Can be either a filename or Base64 value. For Windows if filename, it MUST be ICO format. For Linux, must NOT be ICO. Most portable is to use a Base64 of a PNG file. This works universally across all OS's</td>
+</tr>
+<tr>
+<td>keep_on_top</td>
+<td>bool</td>
+<td>None</td>
+<td>If True, window will be created on top of all other windows on screen. It can be bumped down if another window created with this parm</td>
+</tr>
+<tr>
+<td>layout</td>
+<td>List[List[Element]] or Tuple[Tuple[Element]]</td>
+<td>None</td>
+<td>The layout for the window. Can also be specified in the Layout method</td>
+</tr>
+<tr>
+<td>location</td>
+<td>(int, int or None, None) or None</td>
+<td>(None, None)</td>
+<td>(x,y) location, in pixels, to locate the upper left corner of the window on the screen. Default is to center on screen. None will not set any location meaning the OS will decide</td>
+</tr>
+<tr>
+<td>margins</td>
+<td>(int, int)</td>
+<td>(None, None)</td>
+<td>(left/right, top/bottom) Amount of pixels to leave inside the window's frame around the edges before your elements are shown.</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>Any</td>
+<td>None</td>
+<td>User metadata that can be set to ANYTHING</td>
+</tr>
+<tr>
+<td>modal</td>
+<td>bool</td>
+<td>False</td>
+<td>If True then this window will be the only window a user can interact with until it is closed</td>
+</tr>
+<tr>
+<td>no_titlebar</td>
+<td>bool</td>
+<td>False</td>
+<td>If true, no titlebar nor frame will be shown on window. This means you cannot minimize the window and it will not show up on the taskbar</td>
+</tr>
+<tr>
+<td>print_event_values</td>
+<td>bool</td>
+<td>None</td>
+<td>If True then the event and values will be automatically printed when you call the window's read method. GREAT for debugging! Global setting also available to control this.</td>
+</tr>
+<tr>
+<td>progress_bar_color</td>
+<td>(str, str)</td>
+<td>(None, None)</td>
+<td>(bar color, background color) Sets the default colors for all progress bars in the window</td>
+</tr>
+<tr>
+<td>relative_location</td>
+<td>(int, int)</td>
+<td>(None, None)</td>
+<td>(x,y) location relative to the default location of the window, in pixels. Normally the window centers. This location is relative to the location the window would be created. Note they can be negative.</td>
+</tr>
+<tr>
+<td>repeating_timer_ms</td>
+<td>int</td>
+<td>None</td>
+<td>Causes a repeating timer to start when Window is created. The default EVENT_TIMER will be used for the timer event. Setting will cause window to be Finalized</td>
+</tr>
+<tr>
+<td>resizable</td>
+<td>bool</td>
+<td>False</td>
+<td>If True, allows the user to resize the window. Note the not all Elements will change size or location when resizing.</td>
+</tr>
+<tr>
+<td>return_keyboard_events</td>
+<td>bool</td>
+<td>False</td>
+<td>if True key presses on the keyboard will be returned as Events from Read calls</td>
+</tr>
+<tr>
+<td>right_click_menu</td>
+<td>List[List[ List[str] or str ]]</td>
+<td>None</td>
+<td>A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.</td>
+</tr>
+<tr>
+<td>right_click_menu_background_color</td>
+<td>str</td>
+<td>None</td>
+<td>Background color for right click menus</td>
+</tr>
+<tr>
+<td>right_click_menu_disabled_text_color</td>
+<td>str</td>
+<td>None</td>
+<td>Text color for disabled right click menu items</td>
+</tr>
+<tr>
+<td>right_click_menu_font</td>
+<td>(str or (str, int[, str]) or None)</td>
+<td>None</td>
+<td>Font for right click menus</td>
+</tr>
+<tr>
+<td>right_click_menu_selected_colors</td>
+<td>(str, str) or str or Tuple</td>
+<td>(None, None)</td>
+<td>Text AND background colors for a selected item. Can be a Tuple OR a color string. simplified-button-color-string "foreground on background". Can be a single color if want to set only the background. Normally a tuple, but can be a simplified-dual-color-string "foreground on background". Can be a single color if want to set only the background.</td>
+</tr>
+<tr>
+<td>right_click_menu_tearoff</td>
+<td>bool</td>
+<td>False</td>
+<td>If True then all right click menus can be torn off</td>
+</tr>
+<tr>
+<td>right_click_menu_text_color</td>
+<td>str</td>
+<td>None</td>
+<td>Text color for right click menus</td>
+</tr>
+<tr>
+<td>sbar_arrow_color</td>
+<td>str</td>
+<td>None</td>
+<td>Scrollbar color of the arrow at the ends of the scrollbar (it looks like a button). Switches to background color when mouse is over</td>
+</tr>
+<tr>
+<td>sbar_arrow_width</td>
+<td>int</td>
+<td>None</td>
+<td>Scrollbar width of the arrow on the scrollbar. It will potentially impact the overall width of the scrollbar</td>
+</tr>
+<tr>
+<td>sbar_background_color</td>
+<td>str</td>
+<td>None</td>
+<td>Scrollbar color of the background of the arrow buttons at the ends AND the color of the "thumb" (the thing you grab and slide). Switches to arrow color when mouse is over</td>
+</tr>
+<tr>
+<td>sbar_frame_color</td>
+<td>str</td>
+<td>None</td>
+<td>Scrollbar Color of frame around scrollbar (available only on some ttk themes)</td>
+</tr>
+<tr>
+<td>sbar_relief</td>
+<td>str</td>
+<td>None</td>
+<td>Scrollbar relief that will be used for the "thumb" of the scrollbar (the thing you grab that slides). Should be a constant that is defined at starting with "RELIEF_" - RELIEF_RAISED, RELIEF_SUNKEN, RELIEF_FLAT, RELIEF_RIDGE, RELIEF_GROOVE, RELIEF_SOLID</td>
+</tr>
+<tr>
+<td>sbar_trough_color</td>
+<td>str</td>
+<td>None</td>
+<td>Scrollbar color of the trough</td>
+</tr>
+<tr>
+<td>sbar_width</td>
+<td>int</td>
+<td>None</td>
+<td>Scrollbar width in pixels</td>
+</tr>
+<tr>
+<td>scaling</td>
+<td>float</td>
+<td>None</td>
+<td>Apply scaling to the elements in the window. Can be set on a global basis using set_options</td>
+</tr>
+<tr>
+<td>size</td>
+<td>(int, int)</td>
+<td>(None, None)</td>
+<td>(width, height) size in pixels for this window. Normally the window is autosized to fit contents, not set to an absolute size by the user. Try not to set this value. You risk, the contents being cut off, etc. Let the layout determine the window size instead</td>
+</tr>
+<tr>
+<td>text_justification</td>
+<td>'left' or 'right' or 'center'</td>
+<td>None</td>
+<td>Default text justification for all Text Elements in window</td>
+</tr>
+<tr>
+<td>title</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>The title that will be displayed in the Titlebar and on the Taskbar</td>
+</tr>
+<tr>
+<td>titlebar_background_color</td>
+<td>(str or None)</td>
+<td>None</td>
+<td>If custom titlebar indicated by use_custom_titlebar, then use this as background color</td>
+</tr>
+<tr>
+<td>titlebar_font</td>
+<td>(str or (str, int[, str]) or None)</td>
+<td>None</td>
+<td>If custom titlebar indicated by use_custom_titlebar, then use this as title font</td>
+</tr>
+<tr>
+<td>titlebar_icon</td>
+<td>(bytes or str)</td>
+<td>None</td>
+<td>If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)</td>
+</tr>
+<tr>
+<td>titlebar_text_color</td>
+<td>(str or None)</td>
+<td>None</td>
+<td>If custom titlebar indicated by use_custom_titlebar, then use this as text color</td>
+</tr>
+<tr>
+<td>transparent_color</td>
+<td>str</td>
+<td>None</td>
+<td>Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.</td>
+</tr>
+<tr>
+<td>ttk_theme</td>
+<td>str</td>
+<td>None</td>
+<td>Set the tkinter ttk "theme" of the window. Default = DEFAULT_TTK_THEME. Sets all ttk widgets to this theme as their default</td>
+</tr>
+<tr>
+<td>use_custom_titlebar</td>
+<td>bool</td>
+<td>None</td>
+<td>If True, then a custom titlebar will be used instead of the normal titlebar</td>
+</tr>
+<tr>
+<td>use_default_focus</td>
+<td>bool</td>
+<td>True</td>
+<td>If True will use the default focus algorithm to set the focus to the "Correct" element</td>
+</tr>
+<tr>
+<td>use_ttk_buttons</td>
+<td>bool</td>
+<td>None</td>
+<td>Affects all buttons in window. True = use ttk buttons. False = do not use ttk buttons. None = use ttk buttons only if on a Mac</td>
+</tr>
+<tr>
+<td>watermark</td>
+<td>bool</td>
+<td>None</td>
+<td>If True, then turns on watermarking temporarily for ALL windows created from this point forward. See global settings doc for more info</td>
+</tr>
+</tbody>
+</table>
+<h2 id="class-properties">Class Properties</h2>
+<p>&emsp;<strong><a href="#alpha_channel">alpha_channel</a></strong><br>
+&emsp;<strong><a href="#key_dict">key_dict</a></strong><br>
+&emsp;<strong><a href="#metadata">metadata</a></strong><br>
+&emsp;<strong><a href="#right_click_menu_element">right_click_menu_element</a></strong><br>
+&emsp;<strong><a href="#size">size</a></strong><br></p>
+<h3 id="alpha_channel">alpha_channel</h3>
+<p>A property that changes the current alpha channel value (internal value)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>alpha_channel
+</code></pre></div>
+Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>float</td>
+<td></td>
+<td>the current alpha channel setting according to self, not read directly from tkinter</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key_dict">key_dict</h3>
+<p>Returns a dictionary with all keys and their corresponding elements
+{ key : Element }
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>key_dict
+</code></pre></div>
+Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Dict[Any, Element]</td>
+<td></td>
+<td>Dictionary of keys and elements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metadata">metadata</h3>
+<p>Metadata is available for all windows. You can set to any value.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>metadata
+</code></pre></div>
+Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Any</td>
+<td></td>
+<td>the current metadata value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="right_click_menu_element">right_click_menu_element</h3>
+<p>The element that produced a right click meny event (if one did).  If can't find the element, None is returned.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>right_click_menu_element
+</code></pre></div>
+Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>(Element or None)</td>
+<td></td>
+<td>Element that generated a right click menu event. If one can't be found, then None is returned</td>
+</tr>
+</tbody>
+</table>
+<h3 id="size">size</h3>
+<p>Return the current size of the window in pixels
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>size
+</code></pre></div>
+Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Tuple[(int), (int)] or Tuple[None, None]</td>
+<td></td>
+<td>(width, height) of the window</td>
+</tr>
+</tbody>
+</table>
+<h2 id="class-methods">Class Methods</h2>
+<p>&emsp;def <strong><a href="#add_row">add_row</a></strong><br>
+&emsp;def <strong><a href="#add_rows">add_rows</a></strong><br>
+&emsp;def <strong><a href="#bind">bind</a></strong><br>
+&emsp;def <strong><a href="#bring_to_front">bring_to_front</a></strong><br>
+&emsp;def <strong><a href="#close">close</a></strong><br>
+&emsp;def <strong><a href="#current_location">current_location</a></strong><br>
+&emsp;def <strong><a href="#current_size_accurate">current_size_accurate</a></strong><br>
+&emsp;def <strong><a href="#ding">ding</a></strong><br>
+&emsp;def <strong><a href="#disable">disable</a></strong><br>
+&emsp;def <strong><a href="#disable_debugger">disable_debugger</a></strong><br>
+&emsp;def <strong><a href="#disappear">disappear</a></strong><br>
+&emsp;def <strong><a href="#element_list">element_list</a></strong><br>
+&emsp;def <strong><a href="#enable">enable</a></strong><br>
+&emsp;def <strong><a href="#enable_debugger">enable_debugger</a></strong><br>
+&emsp;def <strong><a href="#extend_layout">extend_layout</a></strong><br>
+&emsp;def <strong><a href="#fill">fill</a></strong><br>
+&emsp;def <strong><a href="#finalize">finalize</a></strong><br>
+&emsp;def <strong><a href="#find_element">find_element</a></strong><br>
+&emsp;def <strong><a href="#find_element_with_focus">find_element_with_focus</a></strong><br>
+&emsp;def <strong><a href="#force_focus">force_focus</a></strong><br>
+&emsp;def <strong><a href="#get_scaling">get_scaling</a></strong><br>
+&emsp;def <strong><a href="#get_screen_dimensions">get_screen_dimensions</a></strong><br>
+&emsp;def <strong><a href="#get_screen_size">get_screen_size</a></strong><br>
+&emsp;def <strong><a href="#grab_any_where_off">grab_any_where_off</a></strong><br>
+&emsp;def <strong><a href="#grab_any_where_on">grab_any_where_on</a></strong><br>
+&emsp;def <strong><a href="#hide">hide</a></strong><br>
+&emsp;def <strong><a href="#is_closed">is_closed</a></strong><br>
+&emsp;def <strong><a href="#is_hidden">is_hidden</a></strong><br>
+&emsp;def <strong><a href="#keep_on_top_clear">keep_on_top_clear</a></strong><br>
+&emsp;def <strong><a href="#keep_on_top_set">keep_on_top_set</a></strong><br>
+&emsp;def <strong><a href="#key_is_good">key_is_good</a></strong><br>
+&emsp;def <strong><a href="#last_location">last_location</a></strong><br>
+&emsp;def <strong><a href="#layout">layout</a></strong><br>
+&emsp;def <strong><a href="#load_from_disk">load_from_disk</a></strong><br>
+&emsp;def <strong><a href="#make_modal">make_modal</a></strong><br>
+&emsp;def <strong><a href="#maximize">maximize</a></strong><br>
+&emsp;def <strong><a href="#minimize">minimize</a></strong><br>
+&emsp;def <strong><a href="#mouse_location">mouse_location</a></strong><br>
+&emsp;def <strong><a href="#move">move</a></strong><br>
+&emsp;def <strong><a href="#move_to_center">move_to_center</a></strong><br>
+&emsp;def <strong><a href="#normal">normal</a></strong><br>
+&emsp;def <strong><a href="#perform_long_operation">perform_long_operation</a></strong><br>
+&emsp;def <strong><a href="#read">read</a></strong><br>
+&emsp;def <strong><a href="#reappear">reappear</a></strong><br>
+&emsp;def <strong><a href="#refresh">refresh</a></strong><br>
+&emsp;def <strong><a href="#save_to_disk">save_to_disk</a></strong><br>
+&emsp;def <strong><a href="#save_window_screenshot_to_disk">save_window_screenshot_to_disk</a></strong><br>
+&emsp;def <strong><a href="#send_to_back">send_to_back</a></strong><br>
+&emsp;def <strong><a href="#set_alpha">set_alpha</a></strong><br>
+&emsp;def <strong><a href="#set_cursor">set_cursor</a></strong><br>
+&emsp;def <strong><a href="#set_icon">set_icon</a></strong><br>
+&emsp;def <strong><a href="#set_min_size">set_min_size</a></strong><br>
+&emsp;def <strong><a href="#set_resizable">set_resizable</a></strong><br>
+&emsp;def <strong><a href="#set_size">set_size</a></strong><br>
+&emsp;def <strong><a href="#set_title">set_title</a></strong><br>
+&emsp;def <strong><a href="#set_transparent_color">set_transparent_color</a></strong><br>
+&emsp;def <strong><a href="#settings_restore">settings_restore</a></strong><br>
+&emsp;def <strong><a href="#settings_save">settings_save</a></strong><br>
+&emsp;def <strong><a href="#start_thread">start_thread</a></strong><br>
+&emsp;def <strong><a href="#timer_get_active_timers">timer_get_active_timers</a></strong><br>
+&emsp;def <strong><a href="#timer_start">timer_start</a></strong><br>
+&emsp;def <strong><a href="#timer_stop">timer_stop</a></strong><br>
+&emsp;def <strong><a href="#timer_stop_all">timer_stop_all</a></strong><br>
+&emsp;def <strong><a href="#un_hide">un_hide</a></strong><br>
+&emsp;def <strong><a href="#unbind">unbind</a></strong><br>
+&emsp;def <strong><a href="#visibility_changed">visibility_changed</a></strong><br>
+&emsp;def <strong><a href="#was_closed">was_closed</a></strong><br>
+&emsp;def <strong><a href="#widget_to_element">widget_to_element</a></strong><br>
+&emsp;def <strong><a href="#write_event_value">write_event_value</a></strong><br></p>
+<h3 id="add_row">add_row</h3>
+<p>Adds a single row of elements to a window's self.Rows variables.
+Generally speaking this is NOT how users should be building Window layouts.
+Users, create a single layout (a list of lists) and pass as a parameter to Window object, or call Window.Layout(layout)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>add_row(
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    args = *&lt;1 or N objects&gt;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*args</td>
+<td></td>
+<td></td>
+<td>List[Elements]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add_rows">add_rows</h3>
+<p>Loops through a list of lists of elements and adds each row, list, to the layout.
+This is NOT the best way to go about creating a window.  Sending the entire layout at one time and passing
+it as a parameter to the Window call is better.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>add_rows(
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    rows
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rows</td>
+<td>List[List[Elements]]</td>
+<td><class 'inspect._empty'></td>
+<td>A list of a list of elements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bind">bind</h3>
+<p>Used to add tkinter events to a Window.
+The tkinter specific data is in the Window's member variable user_bind_event
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>bind(
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    bind_string,
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    key,
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    propagate = True
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bind_string</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>The string tkinter expected in its bind function</td>
+</tr>
+<tr>
+<td>key</td>
+<td>str or int or tuple or object</td>
+<td><class 'inspect._empty'></td>
+<td>The event that will be generated when the tkinter event occurs</td>
+</tr>
+<tr>
+<td>propagate</td>
+<td>bool</td>
+<td>True</td>
+<td>If True then tkinter will be told to propagate the event</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bring_to_front">bring_to_front</h3>
+<p>Brings this window to the top of all other windows (perhaps may not be brought before a window made to "stay
+on top")
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>bring_to_front()
+</code></pre></div></p>
+<h3 id="close">close</h3>
+<p>Closes window.  Users can safely call even if window has been destroyed.   Should always call when done with
+a window so that resources are properly freed up within your thread.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>close()
+</code></pre></div></p>
+<h3 id="current_location">current_location</h3>
+<p>Get the current location of the window's top left corner.
+Sometimes, depending on the environment, the value returned does not include the titlebar,etc
+A new option, more_accurate, can be used to get the theoretical upper leftmost corner of the window.
+The titlebar and menubar are crated by the OS. It gets really confusing when running in a webpage (repl, trinket)
+Thus, the values can appear top be "off" due to the sometimes unpredictable way the location is calculated.
+If without_titlebar is set then the location of the root x,y is used which should not include the titlebar but
+may be OS dependent.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>current_location(
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    more_accurate = False,
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    without_titlebar = False
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>more_accurate</td>
+<td>bool</td>
+<td>False</td>
+<td>If True, will use the window's geometry to get the topmost location with titlebar, menubar taken into account</td>
+</tr>
+<tr>
+<td>without_titlebar</td>
+<td>bool</td>
+<td>False</td>
+<td>If True, return location of top left of main window area without the titlebar (may be OS dependent?)</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Tuple[(int or None), (int or None)]</td>
+<td></td>
+<td>The x and y location in tuple form (x,y)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="current_size_accurate">current_size_accurate</h3>
+<p>Get the current location of the window based on tkinter's geometry setting
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>current_size_accurate()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Tuple[(int or None), (int or None)]</td>
+<td></td>
+<td>The x and y size in tuple form (x,y)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ding">ding</h3>
+<p>Make a "bell" sound. A capability provided by tkinter.  Your window needs to be finalized prior to calling.
+Ring a display's bell is the tkinter description of the call.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ding(
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    display_number = 0
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>display_number</td>
+<td>int</td>
+<td>0</td>
+<td>Passed to tkinter's bell method as parameter "displayof".</td>
+</tr>
+</tbody>
+</table>
+<h3 id="disable">disable</h3>
+<p>Disables window from taking any input from the user
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>disable()
+</code></pre></div></p>
+<h3 id="disable_debugger">disable_debugger</h3>
+<p>Disable the internal debugger. By default the debugger is ENABLED
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>disable_debugger()
+</code></pre></div></p>
+<h3 id="disappear">disappear</h3>
+<p>Causes a window to "disappear" from the screen, but remain on the taskbar. It does this by turning the alpha
+channel to 0.  NOTE that on some platforms alpha is not supported. The window will remain showing on these
+platforms.  The Raspberry Pi for example does not have an alpha setting
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>disappear()
+</code></pre></div></p>
+<h3 id="element_list">element_list</h3>
+<p>Returns a list of all elements in the window
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>element_list()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>List[Element]</td>
+<td></td>
+<td>List of all elements in the window and container elements in the window</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enable">enable</h3>
+<p>Re-enables window to take user input after having it be Disabled previously
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>enable()
+</code></pre></div></p>
+<h3 id="enable_debugger">enable_debugger</h3>
+<p>Enables the internal debugger. By default, the debugger IS enabled
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>enable_debugger()
+</code></pre></div></p>
+<h3 id="extend_layout">extend_layout</h3>
+<p>Adds new rows to an existing container element inside of this window
+If the container is a scrollable Column, you need to also call the contents_changed() method
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>extend_layout(
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    container,
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    rows
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>container</td>
+<td>Frame or Column or Tab</td>
+<td><class 'inspect._empty'></td>
+<td>The container Element the layout will be placed inside of</td>
+</tr>
+<tr>
+<td>rows</td>
+<td>(List[List[Element]])</td>
+<td><class 'inspect._empty'></td>
+<td>The layout to be added</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Window</td>
+<td></td>
+<td>(Window) self so could be chained</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fill">fill</h3>
+<p>Fill in elements that are input fields with data based on a 'values dictionary'
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>fill(
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    values_dict
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>values_dict</td>
+<td>(Dict[Any, Any]) - {Element_key : value}</td>
+<td><class 'inspect._empty'></td>
+<td>pairs</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Window</td>
+<td></td>
+<td>returns self so can be chained with other methods</td>
+</tr>
+</tbody>
+</table>
+<h3 id="finalize">finalize</h3>
+<p>Use this method to cause your layout to built into a real tkinter window.  In reality this method is like
+Read(timeout=0).  It doesn't block and uses your layout to create tkinter widgets to represent the elements.
+Lots of action!
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>finalize()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Window</td>
+<td></td>
+<td>Returns 'self' so that method "Chaining" can happen (read up about it as it's very cool!)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="find_element">find_element</h3>
+<p>Find element object associated with the provided key.
+THIS METHOD IS NO LONGER NEEDED to be called by the user</p>
+<p>You can perform the same operation by writing this statement:
+element = window[key]</p>
+<p>You can drop the entire "find_element" function name and use [ ] instead.</p>
+<p>However, if you wish to perform a lookup without error checking, and don't have error popups turned
+off globally, you'll need to make this call so that you can disable error checks on this call.</p>
+<p>find_element is typically used in combination with a call to element's update method (or any other element method!):
+window[key].update(new_value)</p>
+<p>Versus the "old way"
+window.FindElement(key).Update(new_value)</p>
+<p>This call can be abbreviated to any of these:
+find_element = FindElement == Element == Find
+With find_element being the PEP8 compliant call that should be used.</p>
+<p>Rememeber that this call will return None if no match is found which may cause your code to crash if not
+checked for.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>find_element(
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    key,
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    silent_on_error = False,
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    supress_guessing = None,
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>    supress_raise = None
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>str or int or tuple or object</td>
+<td><class 'inspect._empty'></td>
+<td>Used with window.find_element and with return values to uniquely identify this element</td>
+</tr>
+<tr>
+<td>silent_on_error</td>
+<td>bool</td>
+<td>False</td>
+<td>If True do not display popup nor print warning of key errors</td>
+</tr>
+<tr>
+<td>supress_guessing</td>
+<td>(bool or None)</td>
+<td>None</td>
+<td>Override for the global key guessing setting.</td>
+</tr>
+<tr>
+<td>supress_raise</td>
+<td>(bool or None)</td>
+<td>None</td>
+<td>Override for the global setting that determines if a key error should raise an exception</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Element or ErrorElement or None</td>
+<td></td>
+<td>Return value can be: the Element that matches the supplied key if found; an Error Element if silent_on_error is False; None if silent_on_error True</td>
+</tr>
+</tbody>
+</table>
+<h3 id="find_element_with_focus">find_element_with_focus</h3>
+<p>Returns the Element that currently has focus as reported by tkinter. If no element is found None is returned!
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>find_element_with_focus()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Element or None</td>
+<td></td>
+<td>An Element if one has been found with focus or None if no element found</td>
+</tr>
+</tbody>
+</table>
+<h3 id="force_focus">force_focus</h3>
+<p>Forces this window to take focus
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>force_focus()
+</code></pre></div></p>
+<h3 id="get_scaling">get_scaling</h3>
+<p>Returns the current scaling value set for this window
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>get_scaling()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>float</td>
+<td></td>
+<td>Scaling according to tkinter. Returns DEFAULT_SCALING if error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get_screen_dimensions">get_screen_dimensions</h3>
+<p>Get the screen dimensions.  NOTE - you must have a window already open for this to work (blame tkinter not me)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>get_screen_dimensions()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Tuple[None, None] or Tuple[width, height]</td>
+<td></td>
+<td>Tuple containing width and height of screen in pixels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get_screen_size">get_screen_size</h3>
+<p><strong>This is a class method (implements the @classmethod decorator).</strong></p>
+<p>This is a "Class Method" meaning you call it by writing: width, height = Window.get_screen_size()
+Returns the size of the "screen" as determined by tkinter.  This can vary depending on your operating system and the number of monitors installed on your system.  For Windows, the primary monitor's size is returns. On some multi-monitored Linux systems, the monitors are combined and the total size is reported as if one screen.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>get_screen_size()
+</code></pre></div>
+To call the method without creating an instance of the object:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>sg.Window.get_screen_size()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>(int, int)</td>
+<td></td>
+<td>Size of the screen in pixels as determined by tkinter</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grab_any_where_off">grab_any_where_off</h3>
+<p>Turns off Grab Anywhere functionality AFTER a window has been created.  Don't try on a window that's not yet
+been Finalized or Read.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>grab_any_where_off()
+</code></pre></div></p>
+<h3 id="grab_any_where_on">grab_any_where_on</h3>
+<p>Turns on Grab Anywhere functionality AFTER a window has been created.  Don't try on a window that's not yet
+been Finalized or Read.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>grab_any_where_on()
+</code></pre></div></p>
+<h3 id="hide">hide</h3>
+<p>Hides the window from the screen and the task bar
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>hide()
+</code></pre></div></p>
+<h3 id="is_closed">is_closed</h3>
+<p>Returns True is the window is maybe closed.  Can be difficult to tell sometimes
+NOTE - the call to TKroot.update was taking over 500 ms sometimes so added a flag to bypass the lengthy call.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>is_closed(
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    quick_check = None
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>quick_quick</td>
+<td>bool</td>
+<td></td>
+<td>If True, then don't use the root.update call, only check the flags</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>bool</td>
+<td></td>
+<td>True if the window was closed or destroyed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_hidden">is_hidden</h3>
+<p>Returns True if the window is currently hidden
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>is_hidden()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>bool</td>
+<td></td>
+<td>Returns True if the window is currently hidden</td>
+</tr>
+</tbody>
+</table>
+<h3 id="keep_on_top_clear">keep_on_top_clear</h3>
+<p>Clears keep_on_top after a window has been created.  Effect is the same
+as if the window was created with this set.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>keep_on_top_clear()
+</code></pre></div></p>
+<h3 id="keep_on_top_set">keep_on_top_set</h3>
+<p>Sets keep_on_top after a window has been created.  Effect is the same
+as if the window was created with this set.  The Window is also brought
+to the front
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>keep_on_top_set()
+</code></pre></div></p>
+<h3 id="key_is_good">key_is_good</h3>
+<p>Checks to see if this is a good key for this window
+If there's an element with the key provided, then True is returned
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>key_is_good(
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>    key
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>str or int or tuple or object</td>
+<td><class 'inspect._empty'></td>
+<td>The key to check</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>bool</td>
+<td></td>
+<td>True if key is an element in this window</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_location">last_location</h3>
+<p>The last known location of the window (x,y).  Set by config events from tkinter
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>last_location()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>(int, int)</td>
+<td></td>
+<td>The last location of the window</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layout">layout</h3>
+<p>Second of two preferred ways of telling a Window what its layout is. The other way is to pass the layout as
+a parameter to Window object.  The parameter method is the currently preferred method. This call to Layout
+has been removed from examples contained in documents and in the Demo Programs. Trying to remove this call
+from history and replace with sending as a parameter to Window.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>layout(
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>    rows
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rows</td>
+<td>List[List[Elements]]</td>
+<td><class 'inspect._empty'></td>
+<td>Your entire layout</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Window</td>
+<td></td>
+<td>self so that you can chain method calls</td>
+</tr>
+</tbody>
+</table>
+<h3 id="load_from_disk">load_from_disk</h3>
+<p>Restore values from a previous call to SaveToDisk which saves the returned values dictionary in Pickle format
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>load_from_disk(
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>    filename
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>Pickle Filename to load</td>
+</tr>
+</tbody>
+</table>
+<h3 id="make_modal">make_modal</h3>
+<p>Makes a window into a "Modal Window"
+This means user will not be able to interact with other windows until this one is closed</p>
+<p>NOTE - Sorry Mac users - you can't have modal windows.... lobby your tkinter Mac devs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>make_modal()
+</code></pre></div></p>
+<h3 id="maximize">maximize</h3>
+<p>Maximize the window. This is done differently on a windows system versus a linux or mac one.  For non-Windows
+the root attribute '-fullscreen' is set to True.  For Windows the "root" state is changed to "zoomed"
+The reason for the difference is the title bar is removed in some cases when using fullscreen option
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>maximize()
+</code></pre></div></p>
+<h3 id="minimize">minimize</h3>
+<p>Minimize this window to the task bar
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>minimize()
+</code></pre></div></p>
+<h3 id="mouse_location">mouse_location</h3>
+<p>Return the (x,y) location of the mouse relative to the entire screen.  It's the same location that
+you would use to create a window, popup, etc.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>mouse_location()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>(int, int)</td>
+<td></td>
+<td>The location of the mouse pointer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="move">move</h3>
+<p>Move the upper left corner of this window to the x,y coordinates provided
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>move(
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>    x,
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>    y
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>int</td>
+<td><class 'inspect._empty'></td>
+<td>x coordinate in pixels</td>
+</tr>
+<tr>
+<td>y</td>
+<td>int</td>
+<td><class 'inspect._empty'></td>
+<td>y coordinate in pixels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="move_to_center">move_to_center</h3>
+<p>Recenter your window after it's been moved or the size changed.</p>
+<p>This is a conveinence method. There are no tkinter calls involved, only pure PySimpleGUI API calls.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>move_to_center()
+</code></pre></div></p>
+<h3 id="normal">normal</h3>
+<p>Restore a window to a non-maximized state.  Does different things depending on platform.  See Maximize for more.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>normal()
+</code></pre></div></p>
+<h3 id="perform_long_operation">perform_long_operation</h3>
+<p>Call your function that will take a long time to execute.  When it's complete, send an event
+specified by the end_key.</p>
+<p>Starts a thread on your behalf.</p>
+<p>This is a way for you to "ease into" threading without learning the details of threading.
+Your function will run, and when it returns 2 things will happen:
+1. The value you provide for end_key will be returned to you when you call window.read()
+2. If your function returns a value, then the value returned will also be included in your windows.read call in the values dictionary</p>
+<p>IMPORTANT - This method uses THREADS... this means you CANNOT make any PySimpleGUI calls from
+the function you provide with the exception of one function, Window.write_event_value.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>perform_long_operation(
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>    func,
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>    end_key = None
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>end_key</td>
+<td>(Any or None)</td>
+<td>None</td>
+<td>Optional key that will be generated when the function returns</td>
+</tr>
+<tr>
+<td>func</td>
+<td>Any</td>
+<td><class 'inspect._empty'></td>
+<td>A lambda or a function name with no parms</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>threading.Thread</td>
+<td></td>
+<td>The id of the thread</td>
+</tr>
+</tbody>
+</table>
+<h3 id="read">read</h3>
+<p>THE biggest deal method in the Window class! This is how you get all of your data from your Window.
+Pass in a timeout (in milliseconds) to wait for a maximum of timeout milliseconds. Will return timeout_key
+if no other GUI events happen first.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>read(
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>    timeout = None,
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>    timeout_key = &quot;__TIMEOUT__&quot;,
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>    close = False
+<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>close</td>
+<td>bool</td>
+<td>False</td>
+<td>if True the window will be closed prior to returning</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>int</td>
+<td>None</td>
+<td>Milliseconds to wait until the Read will return IF no other GUI events happen first</td>
+</tr>
+<tr>
+<td>timeout_key</td>
+<td>Any</td>
+<td><strong>TIMEOUT</strong></td>
+<td>The value that will be returned from the call if the timer expired</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Tuple[(Any), Dict[Any, Any], List[Any], None]</td>
+<td></td>
+<td>(event, values)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reappear">reappear</h3>
+<p>Causes a window previously made to "Disappear" (using that method). Does this by restoring the alpha channel
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>reappear()
+</code></pre></div></p>
+<h3 id="refresh">refresh</h3>
+<p>Refreshes the window by calling tkroot.update().  Can sometimes get away with a refresh instead of a Read.
+Use this call when you want something to appear in your Window immediately (as soon as this function is called).
+If you change an element in a window, your change will not be visible until the next call to Window.read
+or a call to Window.refresh()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>refresh()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Window</td>
+<td></td>
+<td><code>self</code> so that method calls can be easily "chained"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="save_to_disk">save_to_disk</h3>
+<p>Saves the values contained in each of the input areas of the form. Basically saves what would be returned from a call to Read.  It takes these results and saves them to disk using pickle.
+ Note that every element in your layout that is to be saved must have a key assigned to it.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>save_to_disk(
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>    filename
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>Filename to save the values to in pickled form</td>
+</tr>
+</tbody>
+</table>
+<h3 id="save_window_screenshot_to_disk">save_window_screenshot_to_disk</h3>
+<p>Saves an image of the PySimpleGUI window provided into the filename provided
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>save_window_screenshot_to_disk(
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>    filename = None
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>(PIL.ImageGrab or None)</td>
+<td></td>
+<td>A PIL ImageGrab object that can be saved or manipulated</td>
+</tr>
+</tbody>
+</table>
+<h3 id="send_to_back">send_to_back</h3>
+<p>Pushes this window to the bottom of the stack of windows. It is the opposite of BringToFront
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>send_to_back()
+</code></pre></div></p>
+<h3 id="set_alpha">set_alpha</h3>
+<p>Sets the Alpha Channel for a window.  Values are between 0 and 1 where 0 is completely transparent
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>set_alpha(
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>    alpha
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alpha</td>
+<td>float</td>
+<td><class 'inspect._empty'></td>
+<td>0 to 1. 0 is completely transparent. 1 is completely visible and solid (can't see through)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_cursor">set_cursor</h3>
+<p>Sets the cursor for the window.
+If you do not want any mouse pointer, then use the string "none"
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>set_cursor(
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>    cursor
+<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cursor</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>The tkinter cursor name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_icon">set_icon</h3>
+<p>Changes the icon that is shown on the title bar and on the task bar.
+NOTE - The file type is IMPORTANT and depends on the OS!
+Can pass in:
+* filename which must be a .ICO icon file for windows, PNG file for Linux
+* bytes object
+* BASE64 encoded file held in a variable
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>set_icon(
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>    icon = None,
+<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>    pngbase64 = None
+<a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>icon</td>
+<td>str</td>
+<td>None</td>
+<td>Filename or bytes object</td>
+</tr>
+<tr>
+<td>pngbase64</td>
+<td>bytes</td>
+<td>None</td>
+<td>Base64 encoded image</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_min_size">set_min_size</h3>
+<p>Changes the minimum size of the window. Note Window must be read or finalized first.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>set_min_size(
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>    size
+<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>(int, int)</td>
+<td><class 'inspect._empty'></td>
+<td>(width, height) tuple (int, int) of the desired window size in pixels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_resizable">set_resizable</h3>
+<p>Changes if a window can be resized in either the X or the Y direction.
+Note Window must be read or finalized first.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>set_resizable(
+<a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>    x_axis_enable,
+<a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>    y_axis_enable
+<a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x_axis_enable</td>
+<td>bool</td>
+<td><class 'inspect._empty'></td>
+<td>If True, the window can be changed in the X-axis direction. If False, it cannot</td>
+</tr>
+<tr>
+<td>y_axis_enable</td>
+<td>bool</td>
+<td><class 'inspect._empty'></td>
+<td>If True, the window can be changed in the Y-axis direction. If False, it cannot</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_size">set_size</h3>
+<p>Changes the size of the window, if possible. You can also use the Window.size prooerty
+to set/get the size.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>set_size(
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>    size
+<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>(int, int)</td>
+<td><class 'inspect._empty'></td>
+<td>(width, height) of the desired window size</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_title">set_title</h3>
+<p>Change the title of the window
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>set_title(
+<a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>    title
+<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>The string to set the title to</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_transparent_color">set_transparent_color</h3>
+<p>Set the color that will be transparent in your window. Areas with this color will be SEE THROUGH.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>set_transparent_color(
+<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>    color
+<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>Color string that defines the transparent color</td>
+</tr>
+</tbody>
+</table>
+<h3 id="settings_restore">settings_restore</h3>
+<p>Reads settings and sets the window's Elements to those values.</p>
+<p>TODO - NOTE - may have trouble on some elements due to how update calls work
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>settings_restore()
+</code></pre></div></p>
+<h3 id="settings_save">settings_save</h3>
+<p>Saves settings to settings file using the values dictionary that is passed in.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>settings_save(
+<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>    values
+<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>values</td>
+<td>Dict</td>
+<td><class 'inspect._empty'></td>
+<td>Dictionary of values to potentially save</td>
+</tr>
+</tbody>
+</table>
+<h3 id="start_thread">start_thread</h3>
+<p><strong>This method is an alias for <a href="#perform_long_operation">perform_long_operation</a></strong></p>
+<h3 id="timer_get_active_timers">timer_get_active_timers</h3>
+<p>Returns a list of currently active timers for a window
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>timer_get_active_timers()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>List[int]</td>
+<td></td>
+<td>List of timers for the window</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timer_start">timer_start</h3>
+<p>Starts a timer that gnerates Timer Events.  The default is to repeat the timer events until timer is stopped.
+You can provide your own key or a default key will be used.  The default key is defined
+with the constants EVENT_TIMER or TIMER_KEY.  They both equal the same value.
+The values dictionary will contain the timer ID that is returned from this function.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>timer_start(
+<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>    frequency_ms,
+<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>    key = &quot;__TIMER EVENT__&quot;,
+<a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a>    repeating = True
+<a id="__codelineno-66-5" name="__codelineno-66-5" href="#__codelineno-66-5"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>frequency_ms</td>
+<td>int</td>
+<td><class 'inspect._empty'></td>
+<td>How often to generate timer events in milliseconds</td>
+</tr>
+<tr>
+<td>key</td>
+<td>str or int or tuple or object</td>
+<td><strong>TIMER EVENT</strong></td>
+<td>Key to be returned as the timer event</td>
+</tr>
+<tr>
+<td>repeating</td>
+<td>bool</td>
+<td>True</td>
+<td>If True then repeat timer events until timer is explicitly stopped</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>int</td>
+<td></td>
+<td>Timer ID for the timer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timer_stop">timer_stop</h3>
+<p>Stops a timer with a given ID
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>timer_stop(
+<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>    timer_id
+<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>timer_id</td>
+<td>int</td>
+<td><class 'inspect._empty'></td>
+<td>Timer ID of timer to stop</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timer_stop_all">timer_stop_all</h3>
+<p>Stops all timers for THIS window
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>timer_stop_all()
+</code></pre></div></p>
+<h3 id="un_hide">un_hide</h3>
+<p>Used to bring back a window that was previously hidden using the Hide method
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>un_hide()
+</code></pre></div></p>
+<h3 id="unbind">unbind</h3>
+<p>Used to remove tkinter events to a Window.
+This implementation removes ALL of the binds of the bind_string from the Window.  If there
+are multiple binds for the Window itself, they will all be removed.  This can be extended later if there
+is a need.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>unbind(
+<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>    bind_string
+<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bind_string</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>The string tkinter expected in its bind function</td>
+</tr>
+</tbody>
+</table>
+<h3 id="visibility_changed">visibility_changed</h3>
+<p>When making an element in a column or someplace that has a scrollbar, then you'll want to call this function
+prior to the column's contents_changed() method.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>visibility_changed()
+</code></pre></div></p>
+<h3 id="was_closed">was_closed</h3>
+<p>Returns True if the window was closed
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>was_closed()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>bool</td>
+<td></td>
+<td>True if the window is closed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="widget_to_element">widget_to_element</h3>
+<p>Returns the element that matches a supplied tkinter widget.
+If no matching element is found, then None is returned.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>widget_to_element(
+<a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a>    widget
+<a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Element or None</td>
+<td></td>
+<td>Element that uses the specified widget</td>
+</tr>
+</tbody>
+</table>
+<h3 id="write_event_value">write_event_value</h3>
+<p>Adds a key &amp; value tuple to the queue that is used by threads to communicate with the window
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>write_event_value(
+<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a>    key,
+<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a>    value
+<a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>Any</td>
+<td><class 'inspect._empty'></td>
+<td>The key that will be returned as the event when reading the window</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Any</td>
+<td><class 'inspect._empty'></td>
+<td>The value that will be in the values dictionary</td>
+</tr>
+</tbody>
+</table>
+
+    
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tkinter Port Call Reference" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Tkinter Port Call Reference
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../elements/button/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Button" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Button
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.integrate", "toc.follow"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../assets/javascripts/scroll-to-active-link.js"></script>
+      
+        <script src="../../../assets/javascripts/unhide-iframes.js"></script>
+      
+    
+    
+  </body>
+
+<!-- Mirrored from docs.pysimplegui.com/en/latest/call_reference/tkinter/window/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Nov 2025 16:38:40 GMT -->
+</html>

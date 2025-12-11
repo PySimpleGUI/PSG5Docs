@@ -1,0 +1,33 @@
+.udemy-advert-card {
+    font-family: 'Roboto', sans-serif; 
+    background-color: var(--md-primary-fg-color); 
+    color: white; 
+    height: 390px; 
+    width: 250px; 
+    border-radius: 20px;
+}
+
+.coupon-link {
+    color: var(--md-primary-bg-color--light) !important;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.udemy-course-link {
+    margin: 10px auto; 
+    display: block; 
+    width: 200px; 
+    height: 70px; 
+    border-radius: 14px; 
+    border: none; 
+    padding: 10px; 
+    font-size: 18px; 
+    background-color: var(--md-primary-fg-color--dark); 
+    color: var(--md-primary-bg-color--light) !important;
+    cursor: pointer;
+    line-height: 25px;
+}
+
+.coupon-link:hover, .udemy-course-link:hover {
+    color: white !important;
+}
