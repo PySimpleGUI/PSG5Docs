@@ -1,0 +1,45 @@
+h2::before, h3::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -3rem; 
+    height: 3rem; 
+    visibility: hidden; 
+    pointer-events: none;
+}
+
+.jump-to-active-btn {
+    color: #02A6F2;
+    font-size: .7rem;
+    padding-left: .6rem;
+    padding-bottom: .5rem;
+}
+
+.jump-to-active-btn:hover {
+    color: #fa0;
+    cursor: pointer;
+}
+
+.md-grid {
+    max-width: 80%;
+}
+
+.index-sub-sections {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.index-sub-section-link {
+    width: 8rem;
+    height: 5rem;
+    line-height: 5rem;
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color--light) !important;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.index-sub-section-link:hover {
+    color: var(--md-primary-bg-color) !important;
+}
