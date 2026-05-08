@@ -989,21 +989,7 @@
   
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
-        Installation and License Keys
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../license_keys/" class="md-nav__link">
-        License Keys - New in PySimpleGUI 5
+        Installation
       </a>
     </li>
   
@@ -1099,20 +1085,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../security/" class="md-nav__link">
-        Security
-      </a>
     </li>
   
 
@@ -2463,6 +2435,20 @@
     <li class="md-nav__item">
       <a href="../../versions/psg5/" class="md-nav__link">
         5.0 Feb-2024
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versions/psg6/" class="md-nav__link">
+        6.0 Apr-2026
       </a>
     </li>
   
@@ -10204,12 +10190,8 @@
 <p><code>python -m pip install --upgrade --no-cache-dir PySimpleGUI</code></p>
 <p>Just as with the initial install, on Linux systems, you may need to add <code>sudo</code> to the start of the command line.</p>
 <h2 id="upgrading-to-a-development-build">Upgrading To a Development Build</h2>
-<p>As bugs are fixed and features are added to PySimpleGUI, they are made available to users prior to their release on PyPI.  This allows you to obtain bug fixes quickly without waiting for testing and posting the release to PyPI.</p>
-<p>Upgrading to a Development Build is done through the PySimpleGUI package itself.  There are 2 methods for upgrading to a Development Build:</p>
-<ol>
-<li>Open the Home Window &amp; clicking the red "Get Latest Development Build" button</li>
-<li>Run <code>psgupgrade</code> from the command line</li>
-</ol>
+<p>The latest development build is located on GitHub.  You can directly pip install it by running the command:</p>
+<p><code>python -m pip install --upgrade https://github.com/PySimpleGUI/PySimpleGUI/zipball/master</code></p>
 <h3 id="recovering-from-a-bad-development-build-release">Recovering From a Bad Development Build Release</h3>
 <p>If you run into a problem upgrading after upgrading to a Development Build, you can likely use pip to uninstall, then re-install from PyPI to see if you can upgrade to a Development Build again.  </p>
 <p><code>pip uninstall PySimpleGUI</code><br />
@@ -10218,17 +10200,6 @@
 <p>To open the PySimpleGUI Home Window, type <code>psghome</code> from the command line, or call <code>sg.main()</code> from your application (or a REPL prompt)</p>
 <p>One advantage to using the Home Window is that you can see your current PySimpleGUI version number as well as the most recent version on PyPI and the current Development Build version number.</p>
 <p>To upgrade, click the red "Get Latest Development Build" button.</p>
-<p><img alt="home window" src="../HomeWindow.gif" /></p>
-<h3 id="using-psgupgrade">Using <code>psgupgrade</code></h3>
-<p>Typing <code>psgupgrade</code> will open a confirmation dialog box just as the Home Window does when upgrading to the Development Build.</p>
-<h3 id="confirmation-dialog-progress-window">Confirmation Dialog &amp; Progress Window</h3>
-<p>After starting an upgrade to the latest Development Build (using the Home Window or psgupgrade command) you will be asked to confirm you want to upgrade.  The confirmation window looks like this:</p>
-<p><img alt="upgrade confirm" src="../upgrade_confirm1.jpg" /></p>
-<p>You are shown your current PySimpleGUI version number and the version you will be upgrading to.  Choose "Yes" if you want to proceed with the upgrade.  Just like major releases of PySimpleGUI, Python's pip operation is used to install Development Builds.  A window showing the output of the upgrade pip command is shown so that you can see the progress and capture the output should there be an error that you need to report.</p>
-<p>Some versions of PySimpleGUI include a "Show Release Notes" button which enables you to see all of the changes that are in the Development Build.</p>
-<p><img alt="release_notes" src="../upgrade_rel_notes.jpg" /></p>
-<p>If you choose "Yes" to install the build, then the output of the pip install will be output to a scrolling window, in real time. At the end of the upgrade you are shown the version of PySimpleGUI that was installed.</p>
-<p><img alt="upgrade status" src="../upgrade_status.jpg" /></p>
 
 
   
@@ -10272,13 +10243,13 @@
       
       
         
-        <a href="../security/" class="md-footer__link md-footer__link--next" aria-label="Next: Security" rel="next">
+        <a href="../../writing_applications/" class="md-footer__link md-footer__link--next" aria-label="Next: Writing PySimpleGUI Applications" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Security
+              Writing PySimpleGUI Applications
             </div>
           </div>
           <div class="md-footer__button md-icon">
