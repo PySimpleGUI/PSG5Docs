@@ -1839,15 +1839,6 @@
       
         
 <li class="md-nav__item">
-    <a href="#give-it-a-try" class="md-nav__link">
-        Give It a Try
-    </a>
-    
-</li>
-
-      
-        
-<li class="md-nav__item">
     <a href="#when-windows-die-event-sgwin_closed-sgwindow_closed" class="md-nav__link">
         When Windows Die - Event sg.WIN_CLOSED / sg.WINDOW_CLOSED
     </a>
@@ -8097,10 +8088,6 @@
 <li>Multiple simultaneous window - has event loop &amp; uses <code>sg.read_all_windows()</code></li>
 </ul>
 <p>Reading a single window uses the call <code>window.read()</code>.  Reading multiple simultaneously running windows uses the call <code>sg.read_all_windows()</code>.</p>
-<h2 id="give-it-a-try">Give It a Try</h2>
-<p>The best way for you to see these design patterns is to both see the code and run it.  Here are all 3 design patterns in a single Trinket.</p>
-<iframe src="https://trinket.io/embed/pygame/134f8b3809" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0 "style="display: none" allowfullscreen></iframe>
-
 <h2 id="when-windows-die-event-sgwin_closed-sgwindow_closed">When Windows Die - Event <code>sg.WIN_CLOSED</code> / <code>sg.WINDOW_CLOSED</code></h2>
 <p>If the user closes the window using the "X" on the titlebar, or uses ALT+F4 on Windows then you will receive an event with the value: <code>sg.WIN_CLOSED</code>.  An alias for this is <code>sg.WINDOW_CLOSED</code>.  In reality, <strong>currently</strong>, this values is <code>None</code>.  There are no guarantees that it will remain that value.... although for backward compatibility it highly likely it will always be that value.  If you see older code that tests for <code>event is None</code>, then it's checking to see if the window has been closed.  Be the programmer kinder to your future self / other programmers and use the constant <code>sg.WIN_CLOSED</code> rather than hard-coding <code>None</code>.</p>
 <p>It's important that you always check for this event immediately after <code>window.read</code> calls so that you do not attempt to perform operations that have a now invalid <code>Window</code> object.  Doing so may crash your code.  You should also assume that the Values Dictionary does not contain information.  It may have a value of <code>None</code> as well meaning attempting to use it will also result in a crash.</p>
@@ -8202,8 +8189,6 @@
 <p>See the call reference for the details of each call.</p>
 <h2 id="readtimeout-t-timeout_keytimeout_key-closefalse">Read(timeout = t, timeout_key=TIMEOUT_KEY, close=False)</h2>
 <p>This timer program is a good example using a <code>read</code> with a timeout.  What's important in this program is that the time shown is accurate.  Exactly how long the time between when the <code>window.read</code> call returns is not important.  If it's 10 ms, 8 ms, 5 ms, or 20 ms, it doesn't matter to this code because the time shown in the timer is computed using a stable time source, a call to <code>time.time</code>.</p>
-<iframe src="https://trinket.io/embed/pygame/90b3c617ba" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" "style="display: none"  allowfullscreen></iframe>
-
 <h3 id="readtimeout0"><code>read(timeout=0)</code></h3>
 <p>It may be tempting, and in some rare cases it's necessary to use a <code>timeout</code> value of 0 or some other value under 10 milliseconds.  The first thing to be aware of is that doing this will consume 100% of your CPU's time unless you've got other calls in your event loop that will pend.</p>
 <p>An example of when it could be OK to use a low value... if you've got a write call to a video display that will take 30 ms, and that call allows other things to run on your processor's core, then a low timeout value is OK.</p>

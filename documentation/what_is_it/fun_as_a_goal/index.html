@@ -8094,9 +8094,6 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                           <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">Ok</span><span class="p">(),</span> <span class="n">sg</span><span class="o">.</span><span class="n">Cancel</span><span class="p">()]])</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">close</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="one_line_example" src="https://user-images.githubusercontent.com/46163555/183507743-1d333a7a-0505-4031-bd58-375bce630c52.gif" /></p>
-<p>Give it a try to see that indeed, this one line of code makes a functioning GUI window...</p>
-<iframe src="https://trinket.io/embed/pygame/28c9e39954" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen style="display: none"></iframe>
-
 <h3 id="two"><strong>Two...</strong></h3>
 <p>The second reason was the non-linear or asynchronous design traditional GUI frameworks use. </p>
 <p>With most GUI frameworks, when something happens, when a button is clicked for example, a function in your code <strong>is called</strong>.  This design results in code that is disjointed, spread out, and executes in what appears to be "non-linear" ways.  In other words, your execution doesn't flow from top to bottom of your program.  Execution jumps all over your file, running a little here, then returning, then running a little there.</p>

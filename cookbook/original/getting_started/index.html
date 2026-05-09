@@ -1957,8 +1957,6 @@
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">text_input</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>    
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">sg</span><span class="o">.</span><span class="n">popup</span><span class="p">(</span><span class="s1">&#39;You entered&#39;</span><span class="p">,</span> <span class="n">text_input</span><span class="p">)</span>
 </code></pre></div>
-<iframe src="https://trinket.io/embed/pygame/87c8b8cdd6" width="100%" height="600" frameborder="0" marginwidth='0' marginheight='0' allowfullscreen style="display: none"></iframe>
-
 <p>If you want to use a key instead of an auto-generated key:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">PySimpleGUI</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sg</span>      
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
@@ -1984,8 +1982,6 @@
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">login_id</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="s1">&#39;-ID-&#39;</span><span class="p">]</span>
 </code></pre></div>
-<iframe src='https://trinket.io/embed/pygame/d4c897136b?start=result' width='100%' height='600' frameborder='0' marginwidth='0' marginheight='0' allowfullscreen style="display: none"></iframe>
-
 <p>The important part of this bit of code is <code>close=True</code>.  This is the parameter that instructs PySimpleGUI to close the window just before the read returns.</p>
 <p>This is a single line of code, broken up to make reading the window layout easier.  It will display a window, let the user enter a value, click a button and then the window will close and execution will be returned to you with the variables <code>event</code> and <code>values</code> being returned.  </p>
 <p>Notice use of Element name "Shortcuts" (uses <code>B</code> rather than <code>Button</code>, <code>T</code> instead of <code>Text</code>, <code>In</code> rather than <code>InputText</code>, etc.).  These shortcuts are fantastic to use when you have complex layouts.  Being able to "see" your entire window's definition on a single screen of code has huge benefits.  It's another tool to help you achieve simple code.</p>
@@ -2050,8 +2046,6 @@
 <a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
 <a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="n">window</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
-<iframe src='https://trinket.io/embed/pygame/c0bf3a6754?start=result' width='100%' height='600' frameborder='0' marginwidth='0' marginheight='0' allowfullscreen style="display: none"></iframe>
-
 <p>To modify an Element in a window, you call its <code>update</code> method.  This is done in 2 steps.  First you lookup the element, then you call that element's <code>update</code> method.</p>
 <p>The way we're achieving output here is by changing a Text Element with this statement:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">window</span><span class="p">[</span><span class="s1">&#39;-OUTPUT-&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;-IN-&#39;</span><span class="p">])</span>
