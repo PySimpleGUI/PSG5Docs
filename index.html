@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#open-source-once-again" class="md-skip">
+        <a href="#what-is-pysimplegui" class="md-skip">
           Skip to content
         </a>
       
@@ -7999,6 +7999,36 @@
 
 </p>
 
+<h1 id="what-is-pysimplegui">What is PySimpleGUI?</h1>
+<p>PySimpleGUI is a wrapper for tkinter (and other GUI libraries) that transforms the GUI SDK into a simpler, more compact architecture while still providing detailed customization.  No prior GUI programming experience needed.</p>
+<p>This is an entire interactive application.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">PySimpleGUI</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sg</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Define the window&#39;s contents</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">layout</span> <span class="o">=</span> <span class="p">[[</span><span class="n">sg</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;What&#39;s your name?&quot;</span><span class="p">)],</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>          <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;-INPUT-&#39;</span><span class="p">)],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>          <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="s1">&#39;-OUTPUT-&#39;</span><span class="p">)],</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>          <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s1">&#39;Ok&#39;</span><span class="p">),</span> <span class="n">sg</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s1">&#39;Quit&#39;</span><span class="p">)]]</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># Create the window</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">window</span> <span class="o">=</span> <span class="n">sg</span><span class="o">.</span><span class="n">Window</span><span class="p">(</span><span class="s1">&#39;Window Title&#39;</span><span class="p">,</span> <span class="n">layout</span><span class="p">)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># Display and interact with the Window using an Event Loop</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">event</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="c1"># See if user wants to quit or window was closed</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="n">sg</span><span class="o">.</span><span class="n">WINDOW_CLOSED</span> <span class="ow">or</span> <span class="n">event</span> <span class="o">==</span> <span class="s1">&#39;Quit&#39;</span><span class="p">:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="k">break</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="c1"># Output a message to the window</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">window</span><span class="p">[</span><span class="s1">&#39;-OUTPUT-&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="n">values</span><span class="p">[</span><span class="s1">&#39;-INPUT-&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;! Thanks for trying PySimpleGUI&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1"># Finish up by removing from the screen</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">window</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p>This is the window that's created.</p>
+<p><img alt="win1" src="https://raw.githubusercontent.com/PySimpleGUI/PySimpleGUI/master/images/for_readme/Example2-1.jpg" /></p>
+<p>Here's the same window after some user interaction.</p>
+<p><img alt="win2" src="https://raw.githubusercontent.com/PySimpleGUI/PySimpleGUI/master/images/for_readme/Example2-2.jpg" /></p>
 <h1 id="open-source-once-again">Open Source Once Again...</h1>
 <p>Hey, it's Mike....<img alt="" src="https://PySimpleGUI.net/images/emojis/wave_56.png?raw=true&amp;v=1" /> </p>
 <p>We gave commercialization a try. It was an incredible experience, but it didn’t generate the resources needed to sustain PySimpleGUI at the level we had hoped. In February 2025, we announced that PySimpleSoft would be shutting down, with support continuing through the end of 2025.</p>
