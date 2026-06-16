@@ -2916,7 +2916,7 @@ may be OS dependent.
 </tr>
 <tr>
 <td><strong>RETURN</strong></td>
-<td>Tuple[(int or None), (int or None)]</td>
+<td>Tuple[int, int] or Tuple[None, None]</td>
 <td></td>
 <td>The x and y location in tuple form (x,y)</td>
 </tr>
@@ -3555,6 +3555,393 @@ you would use to create a window, popup, etc.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>normal()
 </code></pre></div></p>
 <h3 id="perform_long_operation">perform_long_operation</h3>
+<p><strong>This method is an alias for <a href="#start_thread">start_thread</a></strong></p>
+<h3 id="read">read</h3>
+<p>THE biggest deal method in the Window class! This is how you get all of your data from your Window.
+Pass in a timeout (in milliseconds) to wait for a maximum of timeout milliseconds. Will return timeout_key
+if no other GUI events happen first.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>read(
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>    timeout = None,
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>    timeout_key = &quot;__TIMEOUT__&quot;,
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>    close = False
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>close</td>
+<td>bool</td>
+<td>False</td>
+<td>if True the window will be closed prior to returning</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>int or None</td>
+<td>None</td>
+<td>Milliseconds to wait until the Read will return IF no other GUI events happen first</td>
+</tr>
+<tr>
+<td>timeout_key</td>
+<td>Any</td>
+<td><strong>TIMEOUT</strong></td>
+<td>The value that will be returned from the call if the timer expired</td>
+</tr>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Tuple[(Any), Dict[Any, Any], List[Any], None]</td>
+<td></td>
+<td>(event, values)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reappear">reappear</h3>
+<p>Causes a window previously made to "Disappear" (using that method). Does this by restoring the alpha channel
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>reappear()
+</code></pre></div></p>
+<h3 id="refresh">refresh</h3>
+<p>Refreshes the window by calling tkroot.update().  Can sometimes get away with a refresh instead of a Read.
+Use this call when you want something to appear in your Window immediately (as soon as this function is called).
+If you change an element in a window, your change will not be visible until the next call to Window.read
+or a call to Window.refresh()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>refresh()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>Window</td>
+<td></td>
+<td><code>self</code> so that method calls can be easily "chained"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="save_to_disk">save_to_disk</h3>
+<p>Saves the values contained in each of the input areas of the form. Basically saves what would be returned from a call to Read.  It takes these results and saves them to disk using pickle.
+ Note that every element in your layout that is to be saved must have a key assigned to it.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>save_to_disk(
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>    filename
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>Filename to save the values to in pickled form</td>
+</tr>
+</tbody>
+</table>
+<h3 id="save_window_screenshot_to_disk">save_window_screenshot_to_disk</h3>
+<p>Saves an image of the PySimpleGUI window provided into the filename provided
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>save_window_screenshot_to_disk(
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>    filename = None
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>(PIL.ImageGrab or None)</td>
+<td></td>
+<td>A PIL ImageGrab object that can be saved or manipulated</td>
+</tr>
+</tbody>
+</table>
+<h3 id="send_to_back">send_to_back</h3>
+<p>Pushes this window to the bottom of the stack of windows. It is the opposite of BringToFront
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>send_to_back()
+</code></pre></div></p>
+<h3 id="set_alpha">set_alpha</h3>
+<p>Sets the Alpha Channel for a window.  Values are between 0 and 1 where 0 is completely transparent
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>set_alpha(
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>    alpha
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alpha</td>
+<td>float</td>
+<td><class 'inspect._empty'></td>
+<td>0 to 1. 0 is completely transparent. 1 is completely visible and solid (can't see through)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_cursor">set_cursor</h3>
+<p>Sets the cursor for the window.
+If you do not want any mouse pointer, then use the string "none"
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>set_cursor(
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>    cursor
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cursor</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>The tkinter cursor name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_icon">set_icon</h3>
+<p>Changes the icon that is shown on the title bar and on the task bar.
+NOTE - The file type is IMPORTANT and depends on the OS!
+Can pass in:
+* filename which must be a .ICO icon file for windows, PNG file for Linux
+* bytes object
+* BASE64 encoded file held in a variable
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>set_icon(
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>    icon = None,
+<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>    pngbase64 = None
+<a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>icon</td>
+<td>str</td>
+<td>None</td>
+<td>Filename or bytes object</td>
+</tr>
+<tr>
+<td>pngbase64</td>
+<td>bytes</td>
+<td>None</td>
+<td>Base64 encoded image</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_min_size">set_min_size</h3>
+<p>Changes the minimum size of the window. Note Window must be read or finalized first.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>set_min_size(
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>    size
+<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>(int, int)</td>
+<td><class 'inspect._empty'></td>
+<td>(width, height) tuple (int, int) of the desired window size in pixels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_resizable">set_resizable</h3>
+<p>Changes if a window can be resized in either the X or the Y direction.
+Note Window must be read or finalized first.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>set_resizable(
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>    x_axis_enable,
+<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>    y_axis_enable
+<a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x_axis_enable</td>
+<td>bool</td>
+<td><class 'inspect._empty'></td>
+<td>If True, the window can be changed in the X-axis direction. If False, it cannot</td>
+</tr>
+<tr>
+<td>y_axis_enable</td>
+<td>bool</td>
+<td><class 'inspect._empty'></td>
+<td>If True, the window can be changed in the Y-axis direction. If False, it cannot</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_size">set_size</h3>
+<p>Changes the size of the window, if possible. You can also use the Window.size prooerty
+to set/get the size.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>set_size(
+<a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>    size
+<a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>(int, int)</td>
+<td><class 'inspect._empty'></td>
+<td>(width, height) of the desired window size</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_title">set_title</h3>
+<p>Change the title of the window
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>set_title(
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>    title
+<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>The string to set the title to</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_transparent_color">set_transparent_color</h3>
+<p>Set the color that will be transparent in your window. Areas with this color will be SEE THROUGH.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>set_transparent_color(
+<a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>    color
+<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>str</td>
+<td><class 'inspect._empty'></td>
+<td>Color string that defines the transparent color</td>
+</tr>
+</tbody>
+</table>
+<h3 id="settings_restore">settings_restore</h3>
+<p>Reads settings and sets the window's Elements to those values.</p>
+<p>TODO - NOTE - may have trouble on some elements due to how update calls work
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>settings_restore()
+</code></pre></div></p>
+<h3 id="settings_save">settings_save</h3>
+<p>Saves settings to settings file using the values dictionary that is passed in.
+If all of the values in the dictionary are None, then it will not be saved
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>settings_save(
+<a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a>    values
+<a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>values</td>
+<td>Dict</td>
+<td><class 'inspect._empty'></td>
+<td>Dictionary of values to potentially save</td>
+</tr>
+</tbody>
+</table>
+<h3 id="start_thread">start_thread</h3>
 <p>Call your function that will take a long time to execute.  When it's complete, send an event
 specified by the end_key.</p>
 <p>Starts a thread on your behalf.</p>
@@ -3564,10 +3951,10 @@ Your function will run, and when it returns 2 things will happen:
 2. If your function returns a value, then the value returned will also be included in your windows.read call in the values dictionary</p>
 <p>IMPORTANT - This method uses THREADS... this means you CANNOT make any PySimpleGUI calls from
 the function you provide with the exception of one function, Window.write_event_value.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>perform_long_operation(
-<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>    func,
-<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>    end_key = None
-<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>start_thread(
+<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>    func,
+<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>    end_key = None
+<a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3600,392 +3987,6 @@ the function you provide with the exception of one function, Window.write_event_
 </tr>
 </tbody>
 </table>
-<h3 id="read">read</h3>
-<p>THE biggest deal method in the Window class! This is how you get all of your data from your Window.
-Pass in a timeout (in milliseconds) to wait for a maximum of timeout milliseconds. Will return timeout_key
-if no other GUI events happen first.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>read(
-<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>    timeout = None,
-<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>    timeout_key = &quot;__TIMEOUT__&quot;,
-<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>    close = False
-<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>close</td>
-<td>bool</td>
-<td>False</td>
-<td>if True the window will be closed prior to returning</td>
-</tr>
-<tr>
-<td>timeout</td>
-<td>int</td>
-<td>None</td>
-<td>Milliseconds to wait until the Read will return IF no other GUI events happen first</td>
-</tr>
-<tr>
-<td>timeout_key</td>
-<td>Any</td>
-<td><strong>TIMEOUT</strong></td>
-<td>The value that will be returned from the call if the timer expired</td>
-</tr>
-<tr>
-<td><strong>RETURN</strong></td>
-<td>Tuple[(Any), Dict[Any, Any], List[Any], None]</td>
-<td></td>
-<td>(event, values)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="reappear">reappear</h3>
-<p>Causes a window previously made to "Disappear" (using that method). Does this by restoring the alpha channel
-<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>reappear()
-</code></pre></div></p>
-<h3 id="refresh">refresh</h3>
-<p>Refreshes the window by calling tkroot.update().  Can sometimes get away with a refresh instead of a Read.
-Use this call when you want something to appear in your Window immediately (as soon as this function is called).
-If you change an element in a window, your change will not be visible until the next call to Window.read
-or a call to Window.refresh()
-<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>refresh()
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>RETURN</strong></td>
-<td>Window</td>
-<td></td>
-<td><code>self</code> so that method calls can be easily "chained"</td>
-</tr>
-</tbody>
-</table>
-<h3 id="save_to_disk">save_to_disk</h3>
-<p>Saves the values contained in each of the input areas of the form. Basically saves what would be returned from a call to Read.  It takes these results and saves them to disk using pickle.
- Note that every element in your layout that is to be saved must have a key assigned to it.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>save_to_disk(
-<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>    filename
-<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>filename</td>
-<td>str</td>
-<td><class 'inspect._empty'></td>
-<td>Filename to save the values to in pickled form</td>
-</tr>
-</tbody>
-</table>
-<h3 id="save_window_screenshot_to_disk">save_window_screenshot_to_disk</h3>
-<p>Saves an image of the PySimpleGUI window provided into the filename provided
-<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>save_window_screenshot_to_disk(
-<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>    filename = None
-<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>RETURN</strong></td>
-<td>(PIL.ImageGrab or None)</td>
-<td></td>
-<td>A PIL ImageGrab object that can be saved or manipulated</td>
-</tr>
-</tbody>
-</table>
-<h3 id="send_to_back">send_to_back</h3>
-<p>Pushes this window to the bottom of the stack of windows. It is the opposite of BringToFront
-<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>send_to_back()
-</code></pre></div></p>
-<h3 id="set_alpha">set_alpha</h3>
-<p>Sets the Alpha Channel for a window.  Values are between 0 and 1 where 0 is completely transparent
-<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>set_alpha(
-<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>    alpha
-<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>alpha</td>
-<td>float</td>
-<td><class 'inspect._empty'></td>
-<td>0 to 1. 0 is completely transparent. 1 is completely visible and solid (can't see through)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="set_cursor">set_cursor</h3>
-<p>Sets the cursor for the window.
-If you do not want any mouse pointer, then use the string "none"
-<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>set_cursor(
-<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>    cursor
-<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cursor</td>
-<td>str</td>
-<td><class 'inspect._empty'></td>
-<td>The tkinter cursor name</td>
-</tr>
-</tbody>
-</table>
-<h3 id="set_icon">set_icon</h3>
-<p>Changes the icon that is shown on the title bar and on the task bar.
-NOTE - The file type is IMPORTANT and depends on the OS!
-Can pass in:
-* filename which must be a .ICO icon file for windows, PNG file for Linux
-* bytes object
-* BASE64 encoded file held in a variable
-<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>set_icon(
-<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>    icon = None,
-<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>    pngbase64 = None
-<a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>icon</td>
-<td>str</td>
-<td>None</td>
-<td>Filename or bytes object</td>
-</tr>
-<tr>
-<td>pngbase64</td>
-<td>bytes</td>
-<td>None</td>
-<td>Base64 encoded image</td>
-</tr>
-</tbody>
-</table>
-<h3 id="set_min_size">set_min_size</h3>
-<p>Changes the minimum size of the window. Note Window must be read or finalized first.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>set_min_size(
-<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>    size
-<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>size</td>
-<td>(int, int)</td>
-<td><class 'inspect._empty'></td>
-<td>(width, height) tuple (int, int) of the desired window size in pixels</td>
-</tr>
-</tbody>
-</table>
-<h3 id="set_resizable">set_resizable</h3>
-<p>Changes if a window can be resized in either the X or the Y direction.
-Note Window must be read or finalized first.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>set_resizable(
-<a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>    x_axis_enable,
-<a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>    y_axis_enable
-<a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>x_axis_enable</td>
-<td>bool</td>
-<td><class 'inspect._empty'></td>
-<td>If True, the window can be changed in the X-axis direction. If False, it cannot</td>
-</tr>
-<tr>
-<td>y_axis_enable</td>
-<td>bool</td>
-<td><class 'inspect._empty'></td>
-<td>If True, the window can be changed in the Y-axis direction. If False, it cannot</td>
-</tr>
-</tbody>
-</table>
-<h3 id="set_size">set_size</h3>
-<p>Changes the size of the window, if possible. You can also use the Window.size prooerty
-to set/get the size.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>set_size(
-<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>    size
-<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>size</td>
-<td>(int, int)</td>
-<td><class 'inspect._empty'></td>
-<td>(width, height) of the desired window size</td>
-</tr>
-</tbody>
-</table>
-<h3 id="set_title">set_title</h3>
-<p>Change the title of the window
-<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>set_title(
-<a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>    title
-<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>title</td>
-<td>str</td>
-<td><class 'inspect._empty'></td>
-<td>The string to set the title to</td>
-</tr>
-</tbody>
-</table>
-<h3 id="set_transparent_color">set_transparent_color</h3>
-<p>Set the color that will be transparent in your window. Areas with this color will be SEE THROUGH.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>set_transparent_color(
-<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>    color
-<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>color</td>
-<td>str</td>
-<td><class 'inspect._empty'></td>
-<td>Color string that defines the transparent color</td>
-</tr>
-</tbody>
-</table>
-<h3 id="settings_restore">settings_restore</h3>
-<p>Reads settings and sets the window's Elements to those values.</p>
-<p>TODO - NOTE - may have trouble on some elements due to how update calls work
-<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>settings_restore()
-</code></pre></div></p>
-<h3 id="settings_save">settings_save</h3>
-<p>Saves settings to settings file using the values dictionary that is passed in.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>settings_save(
-<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>    values
-<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>values</td>
-<td>Dict</td>
-<td><class 'inspect._empty'></td>
-<td>Dictionary of values to potentially save</td>
-</tr>
-</tbody>
-</table>
-<h3 id="start_thread">start_thread</h3>
-<p><strong>This method is an alias for <a href="#perform_long_operation">perform_long_operation</a></strong></p>
 <h3 id="timer_get_active_timers">timer_get_active_timers</h3>
 <p>Returns a list of currently active timers for a window
 <div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>timer_get_active_timers()
@@ -4010,7 +4011,9 @@ to set/get the size.
 </tbody>
 </table>
 <h3 id="timer_start">timer_start</h3>
-<p>Starts a timer that gnerates Timer Events.  The default is to repeat the timer events until timer is stopped.
+<p>Starts a timer that gnerates Timer Events.
+Time can be specified as an integer number of milliseconds or a string format "H:M:S"
+The default is to repeat the timer events until timer is stopped.
 You can provide your own key or a default key will be used.  The default key is defined
 with the constants EVENT_TIMER or TIMER_KEY.  They both equal the same value.
 The values dictionary will contain the timer ID that is returned from this function.
@@ -4033,9 +4036,9 @@ The values dictionary will contain the timer ID that is returned from this funct
 <tbody>
 <tr>
 <td>frequency_ms</td>
-<td>int</td>
+<td>None or int or str</td>
 <td><class 'inspect._empty'></td>
-<td>How often to generate timer events in milliseconds</td>
+<td>How often to generate timer events in milliseconds or a string "HH:MM:SS". HH, MM, SS each can be any length of chars</td>
 </tr>
 <tr>
 <td>key</td>
@@ -4051,9 +4054,9 @@ The values dictionary will contain the timer ID that is returned from this funct
 </tr>
 <tr>
 <td><strong>RETURN</strong></td>
-<td>int</td>
+<td>int or None</td>
 <td></td>
-<td>Timer ID for the timer</td>
+<td>Timer ID for the timer or None if error</td>
 </tr>
 </tbody>
 </table>

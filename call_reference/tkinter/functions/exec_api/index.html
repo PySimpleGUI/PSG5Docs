@@ -2564,8 +2564,9 @@ When the thead completes, they key provided in the paramters will be returned as
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    package,
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    interpreter = None,
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    force_reinstall = False,
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    upgrade_pip = False
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>)
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    upgrade_pip = False,
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    no_gui = False
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -2589,6 +2590,12 @@ When the thead completes, they key provided in the paramters will be returned as
 <td>str</td>
 <td>None</td>
 <td>The interpreter to use for the install. If none specified, then the currently running interpreter is used</td>
+</tr>
+<tr>
+<td>no_gui</td>
+<td>bool</td>
+<td>False</td>
+<td>If True no GUI to output to</td>
 </tr>
 <tr>
 <td>package</td>

@@ -3051,8 +3051,9 @@ when made visible.
 <a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>    text = None,
 <a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    icon = None,
 <a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>    visible = None,
-<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>    expand_node = None
-<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>)
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>    expand_node = None,
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>    select_node_keys = None
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3082,6 +3083,12 @@ when made visible.
 <td>str or int or tuple or object</td>
 <td>None</td>
 <td>identifies a particular item in tree to update</td>
+</tr>
+<tr>
+<td>select_node_keys</td>
+<td>List[str or int or tuple or object]</td>
+<td>None</td>
+<td>List of nodes to select as if user selected. You'll want to use Extended mode + control key to navigate to retain selection</td>
 </tr>
 <tr>
 <td>text</td>

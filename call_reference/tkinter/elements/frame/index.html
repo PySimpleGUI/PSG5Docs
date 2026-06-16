@@ -2127,18 +2127,20 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    pad = None,
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    p = None,
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    border_width = None,
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    key = None,
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    k = None,
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    tooltip = None,
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    right_click_menu = None,
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    expand_x = False,
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    expand_y = False,
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    grab = None,
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    visible = True,
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    element_justification = &quot;left&quot;,
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    vertical_alignment = None,
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    metadata = None
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>)
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    border_width_no_relief = None,
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    border_color = None,
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    key = None,
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    k = None,
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    tooltip = None,
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    right_click_menu = None,
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    expand_x = False,
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    expand_y = False,
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    grab = None,
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    visible = True,
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    element_justification = &quot;left&quot;,
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    vertical_alignment = None,
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    metadata = None
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>)
 </code></pre></div>
 <h2 id="parameter-descriptions">Parameter Descriptions</h2>
 <table>
@@ -2158,10 +2160,22 @@
 <td>background color of the Frame</td>
 </tr>
 <tr>
+<td>border_color</td>
+<td>str</td>
+<td>None</td>
+<td>Custom color of the border around frame. Set by system if using a relief. Use border_width_no_relief with border_color to get a custom frame color. defaults to text elem color</td>
+</tr>
+<tr>
 <td>border_width</td>
 <td>int</td>
 <td>None</td>
-<td>width of border around element in pixels</td>
+<td>width of border around element in pixels (used with the frame's relief)</td>
+</tr>
+<tr>
+<td>border_width_no_relief</td>
+<td>int</td>
+<td>None</td>
+<td>width of border around element in pixels. This is used without a relief. border_width should be 0 if this parm is non-zero</td>
 </tr>
 <tr>
 <td>element_justification</td>
