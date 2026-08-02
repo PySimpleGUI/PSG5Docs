@@ -2225,16 +2225,17 @@ want, just like a print statement.
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    size = (None, None),
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    location = (None, None),
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    relative_location = (None, None),
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    non_blocking = False,
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    no_titlebar = False,
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    grab_anywhere = False,
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    keep_on_top = None,
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    font = None,
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    image = None,
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    icon = None,
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    modal = True,
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    no_sizegrip = False
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>)
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    location_anchor = None,
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    non_blocking = False,
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    no_titlebar = False,
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    grab_anywhere = False,
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    keep_on_top = None,
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    font = None,
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    image = None,
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    icon = None,
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    modal = True,
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    no_sizegrip = False
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -2315,9 +2316,15 @@ want, just like a print statement.
 </tr>
 <tr>
 <td>location</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
 <td>Location on the screen to place the upper left corner of the window</td>
+</tr>
+<tr>
+<td>location_anchor</td>
+<td>str</td>
+<td>None</td>
+<td>Position on a window that is used to achnor the widow to a location. Default = WIN_ANCHOR_UPPER_LEFT if location is specified</td>
 </tr>
 <tr>
 <td>modal</td>
@@ -2351,13 +2358,13 @@ want, just like a print statement.
 </tr>
 <tr>
 <td>relative_location</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
 <td>(x,y) location relative to the default location of the window, in pixels. Normally the window centers. This location is relative to the location the window would be created. Note they can be negative.</td>
 </tr>
 <tr>
 <td>size</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
 <td>(w,h) w=characters-wide, h=rows-high</td>
 </tr>

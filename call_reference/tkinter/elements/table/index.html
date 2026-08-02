@@ -2220,6 +2220,7 @@
     
 
     <h1 id="table">Table</h1>
+<p><strong><a href="../../../../documentation/module/elements/table">Table documentation</a></strong><br></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Table(
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    values,
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    headings = None,
@@ -2567,7 +2568,7 @@
 </tr>
 <tr>
 <td>size</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
 <td>DO NOT USE! Use num_rows instead</td>
 </tr>
@@ -2751,6 +2752,7 @@ Parameter Descriptions</p>
 &emsp;def <strong><a href="#grab_anywhere_exclude">grab_anywhere_exclude</a></strong><br>
 &emsp;def <strong><a href="#grab_anywhere_include">grab_anywhere_include</a></strong><br>
 &emsp;def <strong><a href="#hide_row">hide_row</a></strong><br>
+&emsp;def <strong><a href="#mouseover_image_set">mouseover_image_set</a></strong><br>
 &emsp;def <strong><a href="#remove_tooltip">remove_tooltip</a></strong><br>
 &emsp;def <strong><a href="#save_element_screenshot_to_disk">save_element_screenshot_to_disk</a></strong><br>
 &emsp;def <strong><a href="#set_cursor">set_cursor</a></strong><br>
@@ -3007,15 +3009,42 @@ This will allow you to make a Multline element drag a window for example
 Use this if you must have all space removed when you are hiding an element, including the row container
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>hide_row()
 </code></pre></div></p>
+<h3 id="mouseover_image_set">mouseover_image_set</h3>
+<p>Used to set or clear the mouseover image for an element
+TODO: need to check it's valid to set a mouseover image for this element and also need to protect against widget not set.
+Also need to unhook the tooltip binding so it won't get stolen by tooltip.  Get for image already set too
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>mouseover_image_set(
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    image_source = None
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image_source</td>
+<td>(str or bytes)</td>
+<td>None</td>
+<td>Image to show when the element is moused over. Element must already have an image set.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="remove_tooltip">remove_tooltip</h3>
 <p>Removes a previiously created tooltip for an element
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>remove_tooltip()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>remove_tooltip()
 </code></pre></div></p>
 <h3 id="save_element_screenshot_to_disk">save_element_screenshot_to_disk</h3>
 <p>Saves an image of the PySimpleGUI window provided into the filename provided
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>save_element_screenshot_to_disk(
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    filename = None
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>save_element_screenshot_to_disk(
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    filename = None
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3042,10 +3071,10 @@ Use this if you must have all space removed when you are hiding an element, incl
 For the parameter "cursor" it's actually the mouse pointer.
 If you do not want any mouse pointer, then use the string "none"
 For the parameter "cursor_color" it's the color of the beam used when typing into an input element
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>set_cursor(
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    cursor = None,
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    cursor_color = None
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>set_cursor(
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    cursor = None,
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    cursor_color = None
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3074,9 +3103,9 @@ For the parameter "cursor_color" it's the color of the beam used when typing int
 </table>
 <h3 id="set_focus">set_focus</h3>
 <p>Sets the current focus to be on this element
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>set_focus(
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    force = False
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>set_focus(
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    force = False
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3099,9 +3128,9 @@ For the parameter "cursor_color" it's the color of the beam used when typing int
 </table>
 <h3 id="set_hscroll_position">set_hscroll_position</h3>
 <p>Attempts to set the horizontal scroll postition for an element's Widget
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>set_hscroll_position(
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    percent_from_left
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>set_hscroll_position(
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    percent_from_left
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3125,9 +3154,10 @@ For the parameter "cursor_color" it's the color of the beam used when typing int
 <h3 id="set_right_click_menu">set_right_click_menu</h3>
 <p>Sets a right click menu for an element.
 If a menu is already set for the element, it will call the tkinter destroy method to remove it
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>set_right_click_menu(
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    menu = None
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>set_right_click_menu(
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    menu = None,
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    propogate_to_window = False
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3151,33 +3181,8 @@ If a menu is already set for the element, it will call the tkinter destroy metho
 <h3 id="set_size">set_size</h3>
 <p>Changes the size of an element to a specific size.
 It's possible to specify None for one of sizes so that only 1 of the element's dimensions are changed.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>set_size(
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    size = (None, None)
-<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>size</td>
-<td>(int, int)</td>
-<td>(None, None)</td>
-<td>The size in characters, rows typically. In some cases they are pixels</td>
-</tr>
-</tbody>
-</table>
-<h3 id="set_tooltip">set_tooltip</h3>
-<p>Called by application to change the tooltip text for an Element.  Normally invoked using the Element Object such as: window.Element('key').SetToolTip('New tip').
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>set_tooltip(
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    tooltip_text
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>set_size(
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    size = (None, None)
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
@@ -3192,18 +3197,86 @@ It's possible to specify None for one of sizes so that only 1 of the element's d
 </thead>
 <tbody>
 <tr>
+<td>size</td>
+<td>(int, int) or (None, None)</td>
+<td>(None, None)</td>
+<td>The size in characters, rows typically. In some cases they are pixels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_tooltip">set_tooltip</h3>
+<p>Called by application to change the tooltip text for an Element or customize the text/background colors, tooltip time, and tooltip offset.
+Normally invoked using the Element Object such as: window['key'].set_tooltip('New tip').
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>set_tooltip(
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    tooltip_text = None,
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    text_color = None,
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    background_color = None,
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>    font = None,
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    tooltip_time = 400,
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>    offset = (0, -20),
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>    skip_bind = None
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background_color</td>
+<td>str</td>
+<td>None</td>
+<td>Text color as a string (tkinter format) to use as text color</td>
+</tr>
+<tr>
+<td>font</td>
+<td>str</td>
+<td>None</td>
+<td>Font to use</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>(int, int)</td>
+<td>(0, -20)</td>
+<td>The x,y offset from the element's location (in pixels) marking where to show the tooltip</td>
+</tr>
+<tr>
+<td>skip_bind</td>
+<td>bool</td>
+<td>None</td>
+<td>If True tooltip will not register binding for enter/leave for the element</td>
+</tr>
+<tr>
+<td>text_color</td>
+<td>str</td>
+<td>None</td>
+<td>Text color as a string (tkinter format) to use as text color</td>
+</tr>
+<tr>
 <td>tooltip_text</td>
-<td>str or None</td>
-<td><class 'inspect._empty'></td>
-<td>the text to show in tooltip. If None then no tip will be shown</td>
+<td>str</td>
+<td>None</td>
+<td>Text to display in tooltip</td>
+</tr>
+<tr>
+<td>tooltip_time</td>
+<td>int</td>
+<td>400</td>
+<td>Milliseconds to show the tooltip</td>
 </tr>
 </tbody>
 </table>
 <h3 id="set_vscroll_position">set_vscroll_position</h3>
 <p>Attempts to set the vertical scroll postition for an element's Widget
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>set_vscroll_position(
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    percent_from_top
-<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>set_vscroll_position(
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    percent_from_top
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3226,9 +3299,9 @@ It's possible to specify None for one of sizes so that only 1 of the element's d
 </table>
 <h3 id="unbind">unbind</h3>
 <p>Removes a previously bound tkinter event from an Element.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>unbind(
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    bind_string
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>unbind(
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    bind_string
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3252,7 +3325,7 @@ It's possible to specify None for one of sizes so that only 1 of the element's d
 <h3 id="unhide_row">unhide_row</h3>
 <p>Unhides (makes visible again) the row container that the Element is located on.
 Note that it will re-appear at the bottom of the window / container, most likely.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>unhide_row()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>unhide_row()
 </code></pre></div></p>
 <h3 id="update">update</h3>
 <p>Changes some of the settings for the Table Element. Must call <code>Window.Read</code> or <code>Window.Finalize</code> prior</p>
@@ -3260,14 +3333,14 @@ Note that it will re-appear at the bottom of the window / container, most likely
 <p>If you change visibility, your element may MOVE. If you want it to remain stationary, use the "layout helper"
 function "pin" to ensure your element is "pinned" to that location in your layout so that it returns there
 when made visible.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>update(
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    values = None,
-<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>    num_rows = None,
-<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>    visible = None,
-<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>    select_rows = None,
-<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>    alternating_row_color = None,
-<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>    row_colors = None
-<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>update(
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    values = None,
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    num_rows = None,
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    visible = None,
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    select_rows = None,
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    alternating_row_color = None,
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    row_colors = None
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>

@@ -1458,6 +1458,15 @@
       
         
 <li class="md-nav__item">
+    <a href="#user_settings_object" class="md-nav__link">
+        user_settings_object
+    </a>
+    
+</li>
+
+      
+        
+<li class="md-nav__item">
     <a href="#user_settings_save" class="md-nav__link">
         user_settings_save
     </a>
@@ -2292,6 +2301,7 @@
     
 
     <h1 id="user-settings-api-function-interface">User Settings API - Function Interface</h1>
+<p><strong><a href="../../../../documentation/module/user_settings">UserSettings documentation</a></strong><br></p>
 <p>You have a couple of ways to access User Settings if your information is stored in JSON format.  If you're using the INI format, then you must use the <code>UserSettings</code> object.</p>
 <p>These are particularly useful directly in layouts, allowing you to you can easily set default values.</p>
 <h2 id="user_settings">user_settings</h2>
@@ -2554,13 +2564,37 @@ If  no filename is specified, then the caller's filename will be used with the e
 </tr>
 </tbody>
 </table>
+<h2 id="user_settings_object">user_settings_object</h2>
+<p>Returns the object that is used for the function version of this API.
+With this object you can use the object interface, print it out in a nice format, etc.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>user_settings_object()
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RETURN</strong></td>
+<td>UserSettings</td>
+<td></td>
+<td>The UserSettings obect used for the function level interface</td>
+</tr>
+</tbody>
+</table>
 <h2 id="user_settings_save">user_settings_save</h2>
 <p>Saves the current settings dictionary.  If a filename or path is specified in the call, then it will override any
 previously specitfied filename to create a new settings file.  The settings dictionary is then saved to the newly defined file.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>user_settings_save(
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    filename = None,
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    path = None
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>user_settings_save(
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    filename = None,
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    path = None
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -2597,10 +2631,10 @@ previously specitfied filename to create a new settings file.  The settings dict
 <p>Sets an individual setting to the specified value.  If no filename has been specified up to this point,
 then a default filename will be used.
 After value has been modified, the settings file is written to disk.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>user_settings_set_entry(
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    key,
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    value
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>user_settings_set_entry(
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    key,
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    value
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -2629,9 +2663,9 @@ After value has been modified, the settings file is written to disk.
 </table>
 <h2 id="user_settings_silent_on_error">user_settings_silent_on_error</h2>
 <p>Used to control the display of error messages.  By default, error messages are displayed to stdout.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>user_settings_silent_on_error(
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    silent_on_error = False
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>user_settings_silent_on_error(
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    silent_on_error = False
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -2654,9 +2688,9 @@ After value has been modified, the settings file is written to disk.
 </table>
 <h2 id="user_settings_write_new_dictionary">user_settings_write_new_dictionary</h2>
 <p>Writes a specified dictionary to the currently defined settings filename.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>user_settings_write_new_dictionary(
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    settings_dict
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>user_settings_write_new_dictionary(
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    settings_dict
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>

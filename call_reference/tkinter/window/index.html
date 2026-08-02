@@ -2217,6 +2217,7 @@
     
 
     <h1 id="window">Window</h1>
+<p><strong><a href="../../../documentation/module/window">Window documentation</a></strong><br></p>
 <p>Represents a single Window</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Window(
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    title,
@@ -2226,65 +2227,72 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    auto_size_text = None,
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    auto_size_buttons = None,
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    location = (None, None),
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    relative_location = (None, None),
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    auto_save_location = False,
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    size = (None, None),
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    element_padding = None,
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    margins = (None, None),
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    button_color = None,
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    font = None,
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    progress_bar_color = (None, None),
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    background_color = None,
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    border_depth = None,
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    auto_close = False,
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    auto_close_duration = 3,
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    icon = None,
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    force_toplevel = False,
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    alpha_channel = None,
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    return_keyboard_events = False,
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    use_default_focus = True,
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    text_justification = None,
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    no_titlebar = False,
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    grab_anywhere = False,
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    grab_anywhere_using_control = True,
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    keep_on_top = None,
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    resizable = False,
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    disable_close = False,
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    disable_minimize = False,
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    right_click_menu = None,
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    transparent_color = None,
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    debugger_enabled = False,
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    right_click_menu_background_color = None,
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    right_click_menu_text_color = None,
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    right_click_menu_disabled_text_color = None,
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    right_click_menu_selected_colors = (None, None),
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    right_click_menu_font = None,
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    right_click_menu_tearoff = False,
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    finalize = False,
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    element_justification = &quot;left&quot;,
-<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    ttk_theme = None,
-<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    use_ttk_buttons = None,
-<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    modal = False,
-<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    enable_close_attempted_event = False,
-<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    enable_window_config_events = False,
-<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    repeating_timer_ms = None,
-<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    titlebar_background_color = None,
-<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    titlebar_text_color = None,
-<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    titlebar_font = None,
-<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    titlebar_icon = None,
-<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    use_custom_titlebar = None,
-<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    scaling = None,
-<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    sbar_trough_color = None,
-<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    sbar_background_color = None,
-<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>    sbar_arrow_color = None,
-<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    sbar_width = None,
-<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    sbar_arrow_width = None,
-<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    sbar_frame_color = None,
-<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    sbar_relief = None,
-<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    watermark = None,
-<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>    print_event_values = None,
-<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    metadata = None
-<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>)
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    location_anchor = None,
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    relative_location = (None, None),
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    auto_save_location = False,
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    size = (None, None),
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    element_padding = None,
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    margins = (None, None),
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    button_color = None,
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    font = None,
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    progress_bar_color = (None, None),
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    background_color = None,
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    border_depth = None,
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    auto_close = False,
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    auto_close_duration = 3,
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    icon = None,
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    force_toplevel = False,
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    alpha_channel = None,
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    return_keyboard_events = False,
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    use_default_focus = True,
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    text_justification = None,
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    no_titlebar = False,
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    grab_anywhere = False,
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    grab_anywhere_using_control = True,
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    keep_on_top = None,
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    resizable = False,
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    use_min_size = False,
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    disable_close = False,
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    disable_minimize = False,
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    right_click_menu = None,
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    transparent_color = None,
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    debugger_enabled = False,
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    right_click_menu_background_color = None,
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    right_click_menu_text_color = None,
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    right_click_menu_disabled_text_color = None,
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    right_click_menu_selected_colors = (None, None),
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    right_click_menu_font = None,
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    right_click_menu_tearoff = False,
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    finalize = False,
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    element_justification = &quot;left&quot;,
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    ttk_theme = None,
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    use_ttk_buttons = None,
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    modal = False,
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    enable_close_attempted_event = False,
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    enable_window_config_events = False,
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    repeating_timer_ms = None,
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    titlebar_background_color = None,
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    titlebar_text_color = None,
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    titlebar_font = None,
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    titlebar_icon = None,
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    use_custom_titlebar = None,
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    tooltip_text_color = None,
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>    tooltip_background_color = None,
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    tooltip_font = None,
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    tooltip_time = 400,
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    tooltip_offset = (0, -20),
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    scaling = None,
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    sbar_trough_color = None,
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>    sbar_background_color = None,
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    sbar_arrow_color = None,
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>    sbar_width = None,
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>    sbar_arrow_width = None,
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>    sbar_frame_color = None,
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>    sbar_relief = None,
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>    watermark = None,
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>    print_event_values = None,
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>    metadata = None
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>)
 </code></pre></div>
 <h2 id="parameter-descriptions">Parameter Descriptions</h2>
 <table>
@@ -2359,7 +2367,7 @@
 </tr>
 <tr>
 <td>default_button_element_size</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
 <td>(width, height) size in characters (wide) and rows (high) for all Button elements in this window</td>
 </tr>
@@ -2460,8 +2468,14 @@
 <td>(x,y) location, in pixels, to locate the upper left corner of the window on the screen. Default is to center on screen. None will not set any location meaning the OS will decide</td>
 </tr>
 <tr>
+<td>location_anchor</td>
+<td>str</td>
+<td>None</td>
+<td>Position on a window that is used to achnor the widow to a location. Default = WIN_ANCHOR_UPPER_LEFT if location is specified</td>
+</tr>
+<tr>
 <td>margins</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
 <td>(left/right, top/bottom) Amount of pixels to leave inside the window's frame around the edges before your elements are shown.</td>
 </tr>
@@ -2497,9 +2511,9 @@
 </tr>
 <tr>
 <td>relative_location</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
-<td>(x,y) location relative to the default location of the window, in pixels. Normally the window centers. This location is relative to the location the window would be created. Note they can be negative.</td>
+<td>(x,y) location relative to the default location of the window, in pixels. This location is relative to the location the window would be created. Note they can be negative.</td>
 </tr>
 <tr>
 <td>repeating_timer_ms</td>
@@ -2611,7 +2625,7 @@
 </tr>
 <tr>
 <td>size</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
 <td>(width, height) size in pixels for this window. Normally the window is autosized to fit contents, not set to an absolute size by the user. Try not to set this value. You risk, the contents being cut off, etc. Let the layout determine the window size instead</td>
 </tr>
@@ -2652,8 +2666,38 @@
 <td>If custom titlebar indicated by use_custom_titlebar, then use this as text color</td>
 </tr>
 <tr>
-<td>transparent_color</td>
+<td>tooltip_background_color</td>
 <td>str</td>
+<td>None</td>
+<td>Text background color to use for tooltips in this window</td>
+</tr>
+<tr>
+<td>tooltip_font</td>
+<td>str or (str, int[, str]) or None)</td>
+<td>None</td>
+<td>Font to use for tooltips in this window</td>
+</tr>
+<tr>
+<td>tooltip_offset</td>
+<td>(int, int)</td>
+<td>(0, -20)</td>
+<td>The x,y offset from the element's location (in pixels) marking where to show the tooltip</td>
+</tr>
+<tr>
+<td>tooltip_text_color</td>
+<td>str</td>
+<td>None</td>
+<td>Text color to use for tooltips in this window</td>
+</tr>
+<tr>
+<td>tooltip_time</td>
+<td>int</td>
+<td>400</td>
+<td>Milliseconds to show the tooltip</td>
+</tr>
+<tr>
+<td>transparent_color</td>
+<td>str or None</td>
 <td>None</td>
 <td>Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.</td>
 </tr>
@@ -2674,6 +2718,12 @@
 <td>bool</td>
 <td>True</td>
 <td>If True will use the default focus algorithm to set the focus to the "Correct" element</td>
+</tr>
+<tr>
+<td>use_min_size</td>
+<td>bool</td>
+<td>False</td>
+<td>If True the window's minimum size will be set when the window is created</td>
 </tr>
 <tr>
 <td>use_ttk_buttons</td>
@@ -2995,8 +3045,9 @@ If without_titlebar is set then the location of the root x,y is used which shoul
 may be OS dependent.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>current_location(
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    more_accurate = False,
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    without_titlebar = False
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>)
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    without_titlebar = False,
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    use_anchor = None
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3014,6 +3065,12 @@ may be OS dependent.
 <td>bool</td>
 <td>False</td>
 <td>If True, will use the window's geometry to get the topmost location with titlebar, menubar taken into account</td>
+</tr>
+<tr>
+<td>use_anchor</td>
+<td>str</td>
+<td>None</td>
+<td>Return location of a specific anchor point on the window. WIN_ANCHOR_UPPER_LEFT is default</td>
 </tr>
 <tr>
 <td>without_titlebar</td>
@@ -3279,7 +3336,7 @@ checked for.
 </tr>
 <tr>
 <td><strong>RETURN</strong></td>
-<td>Element or ErrorElement or None</td>
+<td>Text or Input or Multiline or Output or Combo or OptionMenu or Checkbox or Radio or Spin or Button or ButtonMenu or Slider or Listbox or Image or Graph or Canvas or ProgressBar or Table or Tree or Frame or Column or Tab or TabGroup or Pane or Push or VPush or Sizer or StatusBar or HorizontalSeparator or VerticalSeparator or Sizegrip or Menu or MenuBar or Titlebar or ErrorElement or None</td>
 <td></td>
 <td>Return value can be: the Element that matches the supplied key if found; an Error Element if silent_on_error is False; None if silent_on_error True</td>
 </tr>
@@ -3621,11 +3678,14 @@ you would use to create a window, popup, etc.
 </tbody>
 </table>
 <h3 id="move">move</h3>
-<p>Move the upper left corner of this window to the x,y coordinates provided
+<p>Move the upper left corner of this window to the x,y coordinates provided.
+If a window has an anchor set, then use the anchor.  Override the window's anchor
+using the optional anchor parameter
 <div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>move(
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>    x,
-<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>    y
-<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>)
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>    y,
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>    anchor = None
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3638,6 +3698,12 @@ you would use to create a window, popup, etc.
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>anchor</td>
+<td>str or None</td>
+<td>None</td>
+<td>Optional anchor override</td>
+</tr>
 <tr>
 <td>x</td>
 <td>int</td>
@@ -3704,7 +3770,7 @@ if no other GUI events happen first.
 </tr>
 <tr>
 <td><strong>RETURN</strong></td>
-<td>Tuple[(Any), Dict[Any, Any], List[Any], None]</td>
+<td>Tuple[(Any), Dict[Any, Any] or List[Any] or None]</td>
 <td></td>
 <td>(event, values)</td>
 </tr>

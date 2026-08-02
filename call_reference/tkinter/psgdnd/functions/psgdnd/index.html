@@ -2032,6 +2032,15 @@
       
         
 <li class="md-nav__item">
+    <a href="#on_drop" class="md-nav__link">
+        on_drop
+    </a>
+    
+</li>
+
+      
+        
+<li class="md-nav__item">
     <a href="#register_element_dnd" class="md-nav__link">
         register_element_dnd
     </a>
@@ -2246,15 +2255,55 @@
 </tr>
 </tbody>
 </table>
+<h2 id="on_drop">on_drop</h2>
+<p>The function that is called when a drop happens.  This function reformats and puts the data
+into a DropEvent object and sends it to the window's event queue.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>on_drop(
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    event,
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    element,
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    window
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>element</td>
+<td>(sg.Element)</td>
+<td><class 'inspect._empty'></td>
+<td>Element that received the drop</td>
+</tr>
+<tr>
+<td>event</td>
+<td>(tkinterdnd2.TkinterDnD.DnDEvent)</td>
+<td><class 'inspect._empty'></td>
+<td>Data about the drop event</td>
+</tr>
+<tr>
+<td>window</td>
+<td>(sg.Window)</td>
+<td><class 'inspect._empty'></td>
+<td>Window that contains the element</td>
+</tr>
+</tbody>
+</table>
 <h2 id="register_element_dnd">register_element_dnd</h2>
 <p>Register a window element to accept Drag and Drop.
 Pass in your elmenent object, the window that contains it, the type of drops it can receive.
 Valid drop types: DROP_TYPE_TEXT, DROP_TYPE_FILES, DROP_TYPE_ALL
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>register_element_dnd(
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    element,
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    window,
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    drop_type = &quot;ALL&quot;
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>register_element_dnd(
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    element,
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    window,
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    drop_type = &quot;ALL&quot;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>

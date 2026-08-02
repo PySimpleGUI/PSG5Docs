@@ -15,7 +15,7 @@
     
     
       
-        <title>6.0 Apr-2026 - PySimpleGUI Documentation</title>
+        <title>6.0 Released Apr-2026 - PySimpleGUI Documentation</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#60-apr-2026" class="md-skip">
+        <a href="#60-released-apr-2026" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6.0 Apr-2026
+              6.0 Released Apr-2026
             
           </span>
         </div>
@@ -2389,7 +2389,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        6.0 Apr-2026
+        6.0 Released Apr-2026
       </a>
       
     </li>
@@ -6940,12 +6940,12 @@
                   
 
 
-<h1 id="60-apr-2026">6.0 Apr-2026</h1>
+<h1 id="60-released-apr-2026">6.0 Released Apr-2026</h1>
 <ul>
 <li>Release of new features and bug fixes from version 5 as an open source release.</li>
 <li>All of the licensing, security, and upgrade service code has been removed.</li>
 </ul>
-<h1 id="62-14-jun-2026">6.2 14-Jun-2026</h1>
+<h1 id="62-released-14-jun-2026">6.2 Released 14-Jun-2026</h1>
 <ul>
 <li>Fixed bug in Window.settings_save</li>
 <li>Added ability to "print" an image inline in a Multiline element</li>
@@ -6968,6 +6968,54 @@
 <li>Added ability to specify timers using string "H:M:S" when calling Window.start_timer.</li>
 <li>Enhancement - ability to set the Frame border color. Added border_color and border_width_no_relief parms to the Frame element</li>
 <li>Frame border color to default to the text element color if no color is set</li>
+</ul>
+<h1 id="63-released-2-aug-2026">6.3 Released 2-Aug-2026</h1>
+<ul>
+<li>Mouseover Image - NEW feature for Image and Button elements</li>
+<li>Listbox - New method <code>get_active_index</code>.  Returns the index of where the cursor is located.                                  </li>
+<li>Window new features and fixes</li>
+<li>Window Anchors<ul>
+<li>Window Location Anchor - New location option for creating and getting location for a window. Anchors are specified using these constants:<br />
+  WIN_ANCHOR_UPPER_LEFT <br />
+  WIN_ANCHOR_UPPER_RIGHT<br />
+  WIN_ANCHOR_LOWER_LEFT   <br />
+  WIN_ANCHOR_LOWER_RIGHT<br />
+  WIN_ANCHOR_CENTER  </li>
+<li>Added <code>location_anchor</code> parameter to all the popups.</li>
+<li>New <code>center_on_location</code> parameter that changes the location within a window to use for initial creation. Default if upper left corner.</li>
+<li>Added <code>window_anchor</code> parameter easy_print and the debug window.</li>
+<li>Updated <code>Window.move</code> to use anchors when moving. The anchor used when window created can be overridden using anchor parameter </li>
+</ul>
+</li>
+<li>New <code>use_min_size</code> boolean parameter - If True and the window is resizable, set the minimum size to the size of window when created</li>
+<li>Bug fix in <code>Window.settings_restore</code>. If a value was not yet set for an element, then should save the setting that was specified </li>
+<li><strong>Finally</strong> got the rtype docstring right for <code>Window</code> <code>__getitem__</code>.  It fixed the type warnings and improved the autocomplete</li>
+<li>
+<p>Added parameters <code>tooltip_text_color</code>, <code>tooltip_background_color</code>, <code>tooltip_font</code>, <code>tooltip_time</code>, <code>tooltip_offset</code> to <code>Window</code> object.</p>
+</li>
+<li>
+<p>Added automatic key creation for non-input element. Input type element already get assigned a unique key if one is not specified. Previously, static elements have no key unless explicitly set (e.g. Text elem).  Now all those static elements will get a key with format "KeyID 41B56A4C50" if a key is not specified.</p>
+</li>
+<li>Fixed bug 6896 (Tree object has no attribute BType).  Needed to check the element type is a Button before checking the type of button </li>
+<li>Placeholder - new feature for Input elements. When the input is empty and it doesn't have focus and the mouse is not over it, then a "placeholder" text will be shown in the input area.  Considering adding to Combo and other input-style elements.</li>
+<li>Added new symbols:  </li>
+<li>SYMBOL_GEAR = '⛭'</li>
+<li>SYMBOL_DEGREE = '°'</li>
+<li>SYMBOL_REFRESH = '⟳'</li>
+<li>Right click menu</li>
+<li>Added propogate_to_window param to Element.set_right_click_menu.</li>
+<li>Fixed right click problem of both a window and an element getting the click event.</li>
+<li>Automatically restart user's program after upgrading to the PySimpleGUI maint release.</li>
+<li>Changed a LOT of docstrings for parms that are location and size type of parameters.  Added (None, None) to valid types.</li>
+<li>Expanded the <code>set_tooltip</code> method's parameters to include the text/background colors, tooltip time, tooltip offset, skip bind. Expanded <code>ToolTip</code> object to include the same parms.</li>
+<li>Added border_color parm to the <code>Frame.update</code> method so that the border color can be changed dynamically</li>
+<li>Added font parm to element.set_tooltip. Now all aspects of the tooltip are controllable through this interface.</li>
+<li>Added 'thickness' parameter to HorizontalSeparator and VerticalSeparator elements.  If no thickness is specified, then the current Separator elements are used which as based on TTK Line widgets.  If a thickness is specified, then a Frame widget is used to draw the line.  The added benefit of this addition is that the color of the Frame based lines will match the color used in Frame Elements. </li>
+<li>User Settings - Native support for tuples in UserSettings files (json).  They're now automatically serialized.</li>
+<li><code>Graph</code> Element</li>
+<li>Fixed <code>Graph.draw_arc</code> docstring. It incorrectly stated the available styles.  Should have been 'pieslice', 'chord', 'arc'</li>
+<li><code>Graph.draw_line</code> - added <code>capstyle</code> which determines how the end of the line should appear</li>
+<li><code>Graph.draw_lines</code> - added <code>arrow</code>, <code>arrow_shape</code>, <code>joinstyle</code>, <code>capstype</code> parameters.  </li>
 </ul>
 
 

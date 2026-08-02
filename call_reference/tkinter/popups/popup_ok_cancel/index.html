@@ -2218,9 +2218,10 @@
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    keep_on_top = None,
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    location = (None, None),
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    relative_location = (None, None),
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    image = None,
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    modal = True
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>)
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    location_anchor = None,
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    image = None,
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    modal = True
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -2301,9 +2302,15 @@
 </tr>
 <tr>
 <td>location</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
 <td>Location of upper left corner of the window</td>
+</tr>
+<tr>
+<td>location_anchor</td>
+<td>str</td>
+<td>None</td>
+<td>Position on a window that is used to achnor the widow to a location. Default = WIN_ANCHOR_UPPER_LEFT if location is specified</td>
 </tr>
 <tr>
 <td>modal</td>
@@ -2325,7 +2332,7 @@
 </tr>
 <tr>
 <td>relative_location</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
 <td>(x,y) location relative to the default location of the window, in pixels. Normally the window centers. This location is relative to the location the window would be created. Note they can be negative.</td>
 </tr>

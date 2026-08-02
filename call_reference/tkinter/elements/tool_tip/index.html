@@ -2226,8 +2226,13 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ToolTip(
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    widget,
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    text,
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    timeout = 400
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    timeout = 400,
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    skip_bind = False,
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    offset = (0, -20),
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    background_color = None,
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    text_color = None,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    font = None
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>)
 </code></pre></div>
 <h2 id="parameter-descriptions">Parameter Descriptions</h2>
 <table>
@@ -2241,10 +2246,40 @@
 </thead>
 <tbody>
 <tr>
+<td>background_color</td>
+<td>str</td>
+<td>None</td>
+<td>Background color</td>
+</tr>
+<tr>
+<td>font</td>
+<td>(str or (str, int[, str]) or None)</td>
+<td>None</td>
+<td>specifies the font family, size. Tuple or Single string format 'name size styles'. Styles: italic * roman bold normal underline overstrike</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>(int, int)</td>
+<td>(0, -20)</td>
+<td>Offset (x,y) from widget to show the tooltip.</td>
+</tr>
+<tr>
+<td>skip_bind</td>
+<td>bool</td>
+<td>False</td>
+<td>If True then the widget will not be bound with enter/leave events</td>
+</tr>
+<tr>
 <td>text</td>
 <td>str or None</td>
 <td><class 'inspect._empty'></td>
 <td>text for the tooltip. It can inslude . If None tip won't be shown</td>
+</tr>
+<tr>
+<td>text_color</td>
+<td>str</td>
+<td>None</td>
+<td>Text color</td>
 </tr>
 <tr>
 <td>timeout</td>

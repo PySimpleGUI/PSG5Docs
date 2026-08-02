@@ -2220,6 +2220,7 @@
     
 
     <h1 id="graph">Graph</h1>
+<p><strong><a href="../../../../documentation/module/elements/graph">Graph documentation</a></strong><br></p>
 <p>Creates an area for you to draw on.  The MAGICAL property this Element has is that you interact
     with the element using your own coordinate system.  This is an important point!!  YOU define where the location
     is for (0,0).  Want (0,0) to be in the middle of the graph like a math 4-quadrant graph?  No problem!  Set your
@@ -2277,7 +2278,7 @@
 </tr>
 <tr>
 <td>canvas_size</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td><class 'inspect._empty'></td>
 <td>size of the canvas area in pixels</td>
 </tr>
@@ -2319,13 +2320,13 @@
 </tr>
 <tr>
 <td>graph_bottom_left</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td><class 'inspect._empty'></td>
 <td>(x,y) The bottoms left corner of your coordinate system</td>
 </tr>
 <tr>
 <td>graph_top_right</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td><class 'inspect._empty'></td>
 <td>(x,y) The top right corner of your coordinate system</td>
 </tr>
@@ -2537,6 +2538,7 @@ Parameter Descriptions</p>
 &emsp;def <strong><a href="#grab_anywhere_include">grab_anywhere_include</a></strong><br>
 &emsp;def <strong><a href="#hide_row">hide_row</a></strong><br>
 &emsp;def <strong><a href="#motion_call_back">motion_call_back</a></strong><br>
+&emsp;def <strong><a href="#mouseover_image_set">mouseover_image_set</a></strong><br>
 &emsp;def <strong><a href="#move">move</a></strong><br>
 &emsp;def <strong><a href="#move_figure">move_figure</a></strong><br>
 &emsp;def <strong><a href="#relocate_figure">relocate_figure</a></strong><br>
@@ -2812,7 +2814,7 @@ system - the bottom left and the top right values of your graph.
 <td>style</td>
 <td>str</td>
 <td>None</td>
-<td>Valid choices are One of these Style strings- 'pieslice', 'chord', 'arc', 'first', 'last', 'butt', 'projecting', 'round', 'bevel', 'miter'</td>
+<td>Valid choices are One of these Style strings- 'pieslice', 'chord', 'arc'</td>
 </tr>
 <tr>
 <td>top_left</td>
@@ -2940,8 +2942,9 @@ system - the bottom left and the top right values of your graph.
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    color = &quot;black&quot;,
 <a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    width = 1,
 <a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    arrow = None,
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    arrow_shape = None
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>)
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    arrow_shape = None,
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    capstyle = None
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -2958,13 +2961,19 @@ system - the bottom left and the top right values of your graph.
 <td>arrow</td>
 <td>str</td>
 <td>None</td>
-<td>Determines if an arrowhead will be added to the line. Literal string "first", "last", "both"</td>
+<td>Arrow Style - Determines if an arrowhead will be added to the line. Literal string: first, last, both</td>
 </tr>
 <tr>
 <td>arrow_shape</td>
 <td>Tuple[float, float, float]</td>
 <td>None</td>
 <td>Defines the shape of the arrowhead using a tuple with (length, width, thickness)</td>
+</tr>
+<tr>
+<td>capstyle</td>
+<td>str</td>
+<td>None</td>
+<td>Eetermines if an arrowhead will be added to the line. Literal string: butt, projecting, round</td>
 </tr>
 <tr>
 <td>color</td>
@@ -3003,8 +3012,12 @@ system - the bottom left and the top right values of your graph.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>draw_lines(
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    points,
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    color = &quot;black&quot;,
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    width = 1
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>)
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    width = 1,
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    arrow = None,
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    arrow_shape = None,
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    joinstyle = None,
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    capstyle = None
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3018,10 +3031,34 @@ system - the bottom left and the top right values of your graph.
 </thead>
 <tbody>
 <tr>
+<td>arrow</td>
+<td>str</td>
+<td>None</td>
+<td>Arrow Style - Determines if an arrowhead will be added to the line. Literal string: first, last, both</td>
+</tr>
+<tr>
+<td>arrow_shape</td>
+<td>Tuple[float, float, float]</td>
+<td>None</td>
+<td>Defines the shape of the arrowhead using a tuple with (length, width, thickness)</td>
+</tr>
+<tr>
+<td>capstyle</td>
+<td>str</td>
+<td>None</td>
+<td>Eetermines if an arrowhead will be added to the line. Literal string: butt, projecting, round</td>
+</tr>
+<tr>
 <td>color</td>
 <td>str</td>
 <td>black</td>
 <td>Color of the line</td>
+</tr>
+<tr>
+<td>joinstyle</td>
+<td>str</td>
+<td>None</td>
+<td>Determines if an arrowhead will be added to the line. Literal string: bevel, miter, round</td>
 </tr>
 <tr>
 <td>points</td>
@@ -3538,12 +3575,39 @@ Use this if you must have all space removed when you are hiding an element, incl
 </tr>
 </tbody>
 </table>
+<h3 id="mouseover_image_set">mouseover_image_set</h3>
+<p>Used to set or clear the mouseover image for an element
+TODO: need to check it's valid to set a mouseover image for this element and also need to protect against widget not set.
+Also need to unhook the tooltip binding so it won't get stolen by tooltip.  Get for image already set too
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>mouseover_image_set(
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>    image_source = None
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image_source</td>
+<td>(str or bytes)</td>
+<td>None</td>
+<td>Image to show when the element is moused over. Element must already have an image set.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="move">move</h3>
 <p>Moves the entire drawing area (the canvas) by some delta from the current position.  Units are indicated in your coordinate system indicated number of ticks in your coordinate system
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>move(
-<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>    x_direction,
-<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>    y_direction
-<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>move(
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>    x_direction,
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    y_direction
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3572,11 +3636,11 @@ Use this if you must have all space removed when you are hiding an element, incl
 </table>
 <h3 id="move_figure">move_figure</h3>
 <p>Moves a previously drawn figure using a "delta" from current position
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>move_figure(
-<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>    figure,
-<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    x_direction,
-<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>    y_direction
-<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>move_figure(
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>    figure,
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>    x_direction,
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>    y_direction
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3612,11 +3676,11 @@ Use this if you must have all space removed when you are hiding an element, incl
 <h3 id="relocate_figure">relocate_figure</h3>
 <p>Move a previously made figure to an arbitrary (x,y) location. This differs from the Move methods because it
 uses absolute coordinates versus relative for Move
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>relocate_figure(
-<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>    figure,
-<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>    x,
-<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>    y
-<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>relocate_figure(
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>    figure,
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>    x,
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>    y
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3651,13 +3715,13 @@ uses absolute coordinates versus relative for Move
 </table>
 <h3 id="remove_tooltip">remove_tooltip</h3>
 <p>Removes a previiously created tooltip for an element
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>remove_tooltip()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>remove_tooltip()
 </code></pre></div></p>
 <h3 id="save_element_screenshot_to_disk">save_element_screenshot_to_disk</h3>
 <p>Saves an image of the PySimpleGUI window provided into the filename provided
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>save_element_screenshot_to_disk(
-<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>    filename = None
-<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>save_element_screenshot_to_disk(
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>    filename = None
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3680,9 +3744,9 @@ uses absolute coordinates versus relative for Move
 </table>
 <h3 id="send_figure_to_back">send_figure_to_back</h3>
 <p>Changes Z-order of figures on the Graph.  Sends the indicated figure to the back of all other drawn figures
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>send_figure_to_back(
-<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>    figure
-<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>send_figure_to_back(
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>    figure
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3709,10 +3773,10 @@ uses absolute coordinates versus relative for Move
 For the parameter "cursor" it's actually the mouse pointer.
 If you do not want any mouse pointer, then use the string "none"
 For the parameter "cursor_color" it's the color of the beam used when typing into an input element
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>set_cursor(
-<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>    cursor = None,
-<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>    cursor_color = None
-<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>set_cursor(
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>    cursor = None,
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>    cursor_color = None
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3741,9 +3805,9 @@ For the parameter "cursor_color" it's the color of the beam used when typing int
 </table>
 <h3 id="set_focus">set_focus</h3>
 <p>Sets the current focus to be on this element
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>set_focus(
-<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>    force = False
-<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>set_focus(
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>    force = False
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3766,9 +3830,9 @@ For the parameter "cursor_color" it's the color of the beam used when typing int
 </table>
 <h3 id="set_hscroll_position">set_hscroll_position</h3>
 <p>Attempts to set the horizontal scroll postition for an element's Widget
-<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>set_hscroll_position(
-<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>    percent_from_left
-<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>set_hscroll_position(
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>    percent_from_left
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3792,9 +3856,10 @@ For the parameter "cursor_color" it's the color of the beam used when typing int
 <h3 id="set_right_click_menu">set_right_click_menu</h3>
 <p>Sets a right click menu for an element.
 If a menu is already set for the element, it will call the tkinter destroy method to remove it
-<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>set_right_click_menu(
-<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>    menu = None
-<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>set_right_click_menu(
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>    menu = None,
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>    propogate_to_window = False
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3818,33 +3883,8 @@ If a menu is already set for the element, it will call the tkinter destroy metho
 <h3 id="set_size">set_size</h3>
 <p>Changes the size of an element to a specific size.
 It's possible to specify None for one of sizes so that only 1 of the element's dimensions are changed.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>set_size(
-<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>    size = (None, None)
-<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>)
-</code></pre></div></p>
-<p>Parameter Descriptions</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>size</td>
-<td>(int, int)</td>
-<td>(None, None)</td>
-<td>The size in characters, rows typically. In some cases they are pixels</td>
-</tr>
-</tbody>
-</table>
-<h3 id="set_tooltip">set_tooltip</h3>
-<p>Called by application to change the tooltip text for an Element.  Normally invoked using the Element Object such as: window.Element('key').SetToolTip('New tip').
-<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>set_tooltip(
-<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>    tooltip_text
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>set_size(
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>    size = (None, None)
 <a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
@@ -3859,18 +3899,86 @@ It's possible to specify None for one of sizes so that only 1 of the element's d
 </thead>
 <tbody>
 <tr>
+<td>size</td>
+<td>(int, int) or (None, None)</td>
+<td>(None, None)</td>
+<td>The size in characters, rows typically. In some cases they are pixels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set_tooltip">set_tooltip</h3>
+<p>Called by application to change the tooltip text for an Element or customize the text/background colors, tooltip time, and tooltip offset.
+Normally invoked using the Element Object such as: window['key'].set_tooltip('New tip').
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>set_tooltip(
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>    tooltip_text = None,
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>    text_color = None,
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>    background_color = None,
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>    font = None,
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>    tooltip_time = 400,
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>    offset = (0, -20),
+<a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>    skip_bind = None
+<a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>)
+</code></pre></div></p>
+<p>Parameter Descriptions</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background_color</td>
+<td>str</td>
+<td>None</td>
+<td>Text color as a string (tkinter format) to use as text color</td>
+</tr>
+<tr>
+<td>font</td>
+<td>str</td>
+<td>None</td>
+<td>Font to use</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>(int, int)</td>
+<td>(0, -20)</td>
+<td>The x,y offset from the element's location (in pixels) marking where to show the tooltip</td>
+</tr>
+<tr>
+<td>skip_bind</td>
+<td>bool</td>
+<td>None</td>
+<td>If True tooltip will not register binding for enter/leave for the element</td>
+</tr>
+<tr>
+<td>text_color</td>
+<td>str</td>
+<td>None</td>
+<td>Text color as a string (tkinter format) to use as text color</td>
+</tr>
+<tr>
 <td>tooltip_text</td>
-<td>str or None</td>
-<td><class 'inspect._empty'></td>
-<td>the text to show in tooltip. If None then no tip will be shown</td>
+<td>str</td>
+<td>None</td>
+<td>Text to display in tooltip</td>
+</tr>
+<tr>
+<td>tooltip_time</td>
+<td>int</td>
+<td>400</td>
+<td>Milliseconds to show the tooltip</td>
 </tr>
 </tbody>
 </table>
 <h3 id="set_vscroll_position">set_vscroll_position</h3>
 <p>Attempts to set the vertical scroll postition for an element's Widget
-<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>set_vscroll_position(
-<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>    percent_from_top
-<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>set_vscroll_position(
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>    percent_from_top
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3893,9 +4001,9 @@ It's possible to specify None for one of sizes so that only 1 of the element's d
 </table>
 <h3 id="unbind">unbind</h3>
 <p>Removes a previously bound tkinter event from an Element.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>unbind(
-<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>    bind_string
-<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>unbind(
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>    bind_string
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -3919,7 +4027,7 @@ It's possible to specify None for one of sizes so that only 1 of the element's d
 <h3 id="unhide_row">unhide_row</h3>
 <p>Unhides (makes visible again) the row container that the Element is located on.
 Note that it will re-appear at the bottom of the window / container, most likely.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>unhide_row()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>unhide_row()
 </code></pre></div></p>
 <h3 id="update">update</h3>
 <p>Changes some of the settings for the Graph Element. Must call <code>Window.Read</code> or <code>Window.Finalize</code> prior</p>
@@ -3927,10 +4035,10 @@ Note that it will re-appear at the bottom of the window / container, most likely
 <p>If you change visibility, your element may MOVE. If you want it to remain stationary, use the "layout helper"
 function "pin" to ensure your element is "pinned" to that location in your layout so that it returns there
 when made visible.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>update(
-<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>    background_color = None,
-<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>    visible = None
-<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>update(
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>    background_color = None,
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>    visible = None
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>

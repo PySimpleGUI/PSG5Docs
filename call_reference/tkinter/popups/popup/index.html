@@ -2223,12 +2223,13 @@ choice, _ = sg.Window('Continue?', [[sg.T('Do you want to continue?')], [sg.Yes(
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    keep_on_top = None,
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    location = (None, None),
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    relative_location = (None, None),
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    any_key_closes = False,
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    image = None,
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    modal = True,
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    button_justification = None,
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    drop_whitespace = True
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>)
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    location_anchor = None,
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    any_key_closes = False,
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    image = None,
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    modal = True,
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    button_justification = None,
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    drop_whitespace = True
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>)
 </code></pre></div></p>
 <p>Parameter Descriptions</p>
 <table>
@@ -2339,9 +2340,15 @@ choice, _ = sg.Window('Continue?', [[sg.T('Do you want to continue?')], [sg.Yes(
 </tr>
 <tr>
 <td>location</td>
-<td>(int, int)</td>
+<td>(int, int)  or (None, None)</td>
 <td>(None, None)</td>
 <td>Location on screen to display the top left corner of window. Defaults to window centered on screen</td>
+</tr>
+<tr>
+<td>location_anchor</td>
+<td>str</td>
+<td>None</td>
+<td>Position on a window that is used to achnor the widow to a location. Default = WIN_ANCHOR_UPPER_LEFT if location is specified</td>
 </tr>
 <tr>
 <td>modal</td>
@@ -2363,7 +2370,7 @@ choice, _ = sg.Window('Continue?', [[sg.T('Do you want to continue?')], [sg.Yes(
 </tr>
 <tr>
 <td>relative_location</td>
-<td>(int, int)</td>
+<td>(int, int) or (None, None)</td>
 <td>(None, None)</td>
 <td>(x,y) location relative to the default location of the window, in pixels. Normally the window centers. This location is relative to the location the window would be created. Note they can be negative.</td>
 </tr>
